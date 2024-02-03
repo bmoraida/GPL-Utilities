@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "gpl-utilities"
+version = "0.1.0"
+description = ""
+authors = ["Brenton Moraida <26958105+bmoraida@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.26.3"
+plotly = "^5.18.0"
+pandas = "^2.2.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
