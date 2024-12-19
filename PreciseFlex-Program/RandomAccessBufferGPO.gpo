@@ -1,0 +1,5626 @@
+'GPL Generated Code.  Please do not manually edit
+'Created: 8/1/2022 9:53:56 AM
+'
+Module RandomAccessBufferGPO
+  Public BufferA(100) As Location
+  Public BufferB(100) As Location
+  Public BufferC(100) As Location
+  Public BufferD(100) As Location
+  Public BufferE(100) As Location
+  Public BufferF(100) As Location
+  Public ConveyorA As Location
+  Public ConveyorB As Location
+  Public ConveyorC As Location
+  Public ConveyorD As Location
+  Public Swap As Location
+  Public swap1 As Location
+  Public RAB_Blended As Profile
+  Public RAB_Depart As Profile
+  Public RAB_Fast As Profile
+  Public RAB_Grip As Profile
+  Public RAB_Slow As Profile
+  Public RAB_Straight As Profile
+  Public RAB_StraightBlend As Profile
+
+  Public Sub Init
+    '<MotionLocation>BufferA,100
+    BufferA(0) = New Location 
+    BufferA(0).Text = "DO NOT USE ! ! !"
+    BufferA(0).Type = 0
+    BufferA(0).XYZ(0,0,0,0,0,0)
+    BufferA(0).ZWorld = False
+    BufferA(0).ZClearance = 1E+32
+    BufferA(0).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(1) = New Location 
+    BufferA(1).Type = 0
+    BufferA(1).XYZ(-621.9794,295.3955,1411.701,-45.48594,90,180)
+    BufferA(1).ZWorld = False
+    BufferA(1).ZClearance = 1E+32
+    BufferA(1).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(2) = New Location 
+    BufferA(2).Type = 0
+    BufferA(2).XYZ(-534.0672,380.2378,1411.701,-44.67049,90,180)
+    BufferA(2).ZWorld = False
+    BufferA(2).ZClearance = 1E+32
+    BufferA(2).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(3) = New Location 
+    BufferA(3).Type = 0
+    BufferA(3).XYZ(-461.9742,450.217,1411.701,-48.0377,90,180)
+    BufferA(3).ZWorld = False
+    BufferA(3).ZClearance = 1E+32
+    BufferA(3).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(4) = New Location 
+    BufferA(4).Type = 0
+    BufferA(4).XYZ(-373.3145,538.9666,1411.7,-46.23582,90,180)
+    BufferA(4).ZWorld = False
+    BufferA(4).ZClearance = 1E+32
+    BufferA(4).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(5) = New Location 
+    BufferA(5).Type = 0
+    BufferA(5).XYZ(-292.3273,616.892,1411.7,-47.59462,90,180)
+    BufferA(5).ZWorld = False
+    BufferA(5).ZClearance = 1E+32
+    BufferA(5).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(6) = New Location 
+    BufferA(6).Type = 0
+    BufferA(6).XYZ(-619.5641,297.1499,1346.453,-44.9421,90,180)
+    BufferA(6).ZWorld = False
+    BufferA(6).ZClearance = 1E+32
+    BufferA(6).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(7) = New Location 
+    BufferA(7).Type = 0
+    BufferA(7).XYZ(-548.4133,366.069,1346.453,-48.78137,90,180)
+    BufferA(7).ZWorld = False
+    BufferA(7).ZClearance = 1E+32
+    BufferA(7).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(8) = New Location 
+    BufferA(8).Type = 0
+    BufferA(8).XYZ(-460.2126,453.7114,1346.454,-47.42688,90,180)
+    BufferA(8).ZWorld = False
+    BufferA(8).ZClearance = 1E+32
+    BufferA(8).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(9) = New Location 
+    BufferA(9).Type = 0
+    BufferA(9).XYZ(-367.0335,544.487,1345.312,-44.67104,90,180)
+    BufferA(9).ZWorld = False
+    BufferA(9).ZClearance = 1E+32
+    BufferA(9).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(10) = New Location 
+    BufferA(10).Type = 0
+    BufferA(10).XYZ(-288.944,623.0406,1346.453,-45.82502,90,180)
+    BufferA(10).ZWorld = False
+    BufferA(10).ZClearance = 1E+32
+    BufferA(10).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(11) = New Location 
+    BufferA(11).Type = 0
+    BufferA(11).XYZ(-619.4368,299.4288,1279.081,-44.31746,90,180)
+    BufferA(11).ZWorld = False
+    BufferA(11).ZClearance = 1E+32
+    BufferA(11).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(12) = New Location 
+    BufferA(12).Type = 0
+    BufferA(12).XYZ(-534.2885,380.9742,1279.085,-44.17819,90,180)
+    BufferA(12).ZWorld = False
+    BufferA(12).ZClearance = 1E+32
+    BufferA(12).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(13) = New Location 
+    BufferA(13).Type = 0
+    BufferA(13).XYZ(-457.3839,456.3731,1279.085,-46.3155,90,180)
+    BufferA(13).ZWorld = False
+    BufferA(13).ZClearance = 1E+32
+    BufferA(13).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(14) = New Location 
+    BufferA(14).Type = 0
+    BufferA(14).XYZ(-373.3723,538.0702,1279.085,-46.29843,90,180)
+    BufferA(14).ZWorld = False
+    BufferA(14).ZClearance = 1E+32
+    BufferA(14).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(15) = New Location 
+    BufferA(15).Type = 0
+    BufferA(15).XYZ(-287.3754,625.5564,1279.085,-45.16154,90,180)
+    BufferA(15).ZWorld = False
+    BufferA(15).ZClearance = 1E+32
+    BufferA(15).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(16) = New Location 
+    BufferA(16).Type = 0
+    BufferA(16).XYZ(-618.074,291.8738,1214.246,-45.08263,90,180)
+    BufferA(16).ZWorld = False
+    BufferA(16).ZClearance = 1E+32
+    BufferA(16).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(17) = New Location 
+    BufferA(17).Type = 0
+    BufferA(17).XYZ(-537.3485,375.9141,1214.242,-45.26725,90,180)
+    BufferA(17).ZWorld = False
+    BufferA(17).ZClearance = 1E+32
+    BufferA(17).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(18) = New Location 
+    BufferA(18).Type = 0
+    BufferA(18).XYZ(-448.1947,465.1143,1209.849,-43.19696,90,180)
+    BufferA(18).ZWorld = False
+    BufferA(18).ZClearance = 1E+32
+    BufferA(18).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(19) = New Location 
+    BufferA(19).Type = 0
+    BufferA(19).XYZ(-375.7605,538.8641,1211.372,-46.31354,90,180)
+    BufferA(19).ZWorld = False
+    BufferA(19).ZClearance = 1E+32
+    BufferA(19).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(20) = New Location 
+    BufferA(20).Type = 0
+    BufferA(20).XYZ(-298.115,615.6523,1213.091,-47.98276,90,180)
+    BufferA(20).ZWorld = False
+    BufferA(20).ZClearance = 1E+32
+    BufferA(20).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(21) = New Location 
+    BufferA(21).Type = 0
+    BufferA(21).XYZ(-623.54,296.4836,1146.783,-45.11934,90,180)
+    BufferA(21).ZWorld = False
+    BufferA(21).ZClearance = 1E+32
+    BufferA(21).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(22) = New Location 
+    BufferA(22).Type = 0
+    BufferA(22).XYZ(-547.4941,370.3625,1146.779,-47.42277,90,180)
+    BufferA(22).ZWorld = False
+    BufferA(22).ZClearance = 1E+32
+    BufferA(22).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(23) = New Location 
+    BufferA(23).Type = 0
+    BufferA(23).XYZ(-458.8593,457.2942,1146.49,-46.09121,90,180)
+    BufferA(23).ZWorld = False
+    BufferA(23).ZClearance = 1E+32
+    BufferA(23).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(24) = New Location 
+    BufferA(24).Type = 0
+    BufferA(24).XYZ(-376.4991,538.2429,1146.489,-46.3542,90,180)
+    BufferA(24).ZWorld = False
+    BufferA(24).ZClearance = 1E+32
+    BufferA(24).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(25) = New Location 
+    BufferA(25).Type = 0
+    BufferA(25).XYZ(-297.7416,615.5351,1146.489,-47.81066,90,180)
+    BufferA(25).ZWorld = False
+    BufferA(25).ZClearance = 1E+32
+    BufferA(25).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(26) = New Location 
+    BufferA(26).Type = 0
+    BufferA(26).XYZ(-619.3275,301.5752,1081.143,-43.7759,90,180)
+    BufferA(26).ZWorld = False
+    BufferA(26).ZClearance = 1E+32
+    BufferA(26).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(27) = New Location 
+    BufferA(27).Type = 0
+    BufferA(27).XYZ(-542.6526,375.7455,1081.135,-46.04388,90,180)
+    BufferA(27).ZWorld = False
+    BufferA(27).ZClearance = 1E+32
+    BufferA(27).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(28) = New Location 
+    BufferA(28).Type = 0
+    BufferA(28).XYZ(-457.0727,460.0107,1080.389,-45.39676,90,180)
+    BufferA(28).ZWorld = False
+    BufferA(28).ZClearance = 1E+32
+    BufferA(28).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(29) = New Location 
+    BufferA(29).Type = 0
+    BufferA(29).XYZ(-369.5963,545.5139,1080.389,-44.26457,90,180)
+    BufferA(29).ZWorld = False
+    BufferA(29).ZClearance = 1E+32
+    BufferA(29).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(30) = New Location 
+    BufferA(30).Type = 0
+    BufferA(30).XYZ(-289.7859,623.9713,1080.389,-45.32552,90,180)
+    BufferA(30).ZWorld = False
+    BufferA(30).ZClearance = 1E+32
+    BufferA(30).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(31) = New Location 
+    BufferA(31).Type = 0
+    BufferA(31).XYZ(-622.0472,298.7417,1013.716,-44.46772,90,180)
+    BufferA(31).ZWorld = False
+    BufferA(31).ZClearance = 1E+32
+    BufferA(31).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(32) = New Location 
+    BufferA(32).Type = 0
+    BufferA(32).XYZ(-539.2131,380.4407,1013.716,-44.70028,90,180)
+    BufferA(32).ZWorld = False
+    BufferA(32).ZClearance = 1E+32
+    BufferA(32).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(33) = New Location 
+    BufferA(33).Type = 0
+    BufferA(33).XYZ(-456.9666,460.7487,1013.716,-45.17733,90,180)
+    BufferA(33).ZWorld = False
+    BufferA(33).ZClearance = 1E+32
+    BufferA(33).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(34) = New Location 
+    BufferA(34).Type = 0
+    BufferA(34).XYZ(-378.2136,537.8483,1013.715,-46.7662,90,180)
+    BufferA(34).ZWorld = False
+    BufferA(34).ZClearance = 1E+32
+    BufferA(34).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(35) = New Location 
+    BufferA(35).Type = 0
+    BufferA(35).XYZ(-286.218,628.4201,1013.675,-44.08979,90,180)
+    BufferA(35).ZWorld = False
+    BufferA(35).ZClearance = 1E+32
+    BufferA(35).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(36) = New Location 
+    BufferA(36).Type = 0
+    BufferA(36).XYZ(-618.2084,301.7372,947.7476,-43.37289,90,180)
+    BufferA(36).ZWorld = False
+    BufferA(36).ZClearance = 1E+32
+    BufferA(36).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(37) = New Location 
+    BufferA(37).Type = 0
+    BufferA(37).XYZ(-541.3496,379.0608,947.7469,-45.03668,90,180)
+    BufferA(37).ZWorld = False
+    BufferA(37).ZClearance = 1E+32
+    BufferA(37).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(38) = New Location 
+    BufferA(38).Type = 0
+    BufferA(38).XYZ(-460.7654,457.8965,947.7473,-45.91367,90,180)
+    BufferA(38).ZWorld = False
+    BufferA(38).ZClearance = 1E+32
+    BufferA(38).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(39) = New Location 
+    BufferA(39).Type = 0
+    BufferA(39).XYZ(-376.4457,541.1657,947.7476,-45.74517,90,180)
+    BufferA(39).ZWorld = False
+    BufferA(39).ZClearance = 1E+32
+    BufferA(39).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(40) = New Location 
+    BufferA(40).Type = 0
+    BufferA(40).XYZ(-296.4396,619.7577,947.7476,-46.76936,90,180)
+    BufferA(40).ZWorld = False
+    BufferA(40).ZClearance = 1E+32
+    BufferA(40).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(41) = New Location 
+    BufferA(41).Type = 0
+    BufferA(41).XYZ(-619.581,302.3528,880.8623,-43.45325,90,180)
+    BufferA(41).ZWorld = False
+    BufferA(41).ZClearance = 1E+32
+    BufferA(41).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(42) = New Location 
+    BufferA(42).Type = 0
+    BufferA(42).XYZ(-535.3789,381.7043,880.8409,-43.65578,90,180)
+    BufferA(42).ZWorld = False
+    BufferA(42).ZClearance = 1E+32
+    BufferA(42).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(43) = New Location 
+    BufferA(43).Type = 0
+    BufferA(43).XYZ(-461.3581,454.8402,880.8216,-46.53282,90,180)
+    BufferA(43).ZWorld = False
+    BufferA(43).ZClearance = 1E+32
+    BufferA(43).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(44) = New Location 
+    BufferA(44).Type = 0
+    BufferA(44).XYZ(-379.5654,537.2621,880.8171,-46.81258,90,180)
+    BufferA(44).ZWorld = False
+    BufferA(44).ZClearance = 1E+32
+    BufferA(44).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(45) = New Location 
+    BufferA(45).Type = 0
+    BufferA(45).XYZ(-283.9272,628.3528,880.8338,-43.59011,90,180)
+    BufferA(45).ZWorld = False
+    BufferA(45).ZClearance = 1E+32
+    BufferA(45).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(46) = New Location 
+    BufferA(46).Type = 0
+    BufferA(46).XYZ(-620.7471,300.1277,815.5436,-43.54133,90,180)
+    BufferA(46).ZWorld = False
+    BufferA(46).ZClearance = 1E+32
+    BufferA(46).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(47) = New Location 
+    BufferA(47).Type = 0
+    BufferA(47).XYZ(-539.1852,380.9903,815.2861,-44.23264,90,180)
+    BufferA(47).ZWorld = False
+    BufferA(47).ZClearance = 1E+32
+    BufferA(47).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(48) = New Location 
+    BufferA(48).Type = 0
+    BufferA(48).XYZ(-456.0698,462.0753,815.3277,-44.48711,90,180)
+    BufferA(48).ZWorld = False
+    BufferA(48).ZClearance = 1E+32
+    BufferA(48).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(49) = New Location 
+    BufferA(49).Type = 0
+    BufferA(49).XYZ(-373.7853,544.1345,814.3292,-44.67239,90,180)
+    BufferA(49).ZWorld = False
+    BufferA(49).ZClearance = 1E+32
+    BufferA(49).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(50) = New Location 
+    BufferA(50).Type = 0
+    BufferA(50).XYZ(-292.1183,624.3112,814.8834,-45.27765,90,180)
+    BufferA(50).ZWorld = False
+    BufferA(50).ZClearance = 1E+32
+    BufferA(50).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(51) = New Location 
+    BufferA(51).Type = 0
+    BufferA(51).XYZ(-626.1563,297.0291,748.0042,-44.7345,90,180)
+    BufferA(51).ZWorld = False
+    BufferA(51).ZClearance = 1E+32
+    BufferA(51).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(52) = New Location 
+    BufferA(52).Type = 0
+    BufferA(52).XYZ(-537.5931,384.0261,747.6696,-43.49557,90,180)
+    BufferA(52).ZWorld = False
+    BufferA(52).ZClearance = 1E+32
+    BufferA(52).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(53) = New Location 
+    BufferA(53).Type = 0
+    BufferA(53).XYZ(-459.159,460.9132,747.6777,-45.00281,90,180)
+    BufferA(53).ZWorld = False
+    BufferA(53).ZClearance = 1E+32
+    BufferA(53).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(54) = New Location 
+    BufferA(54).Type = 0
+    BufferA(54).XYZ(-372.994,544.8976,747.6774,-44.38171,90,180)
+    BufferA(54).ZWorld = False
+    BufferA(54).ZClearance = 1E+32
+    BufferA(54).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(55) = New Location 
+    BufferA(55).Type = 0
+    BufferA(55).XYZ(-292.4161,625.539,747.6771,-45.11263,90,180)
+    BufferA(55).ZWorld = False
+    BufferA(55).ZClearance = 1E+32
+    BufferA(55).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(56) = New Location 
+    BufferA(56).Type = 0
+    BufferA(56).XYZ(-624.4204,299.6118,682.2938,-44.06422,90,180)
+    BufferA(56).ZWorld = False
+    BufferA(56).ZClearance = 1E+32
+    BufferA(56).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(57) = New Location 
+    BufferA(57).Type = 0
+    BufferA(57).XYZ(-537.4885,383.6058,682.2908,-43.34911,90,180)
+    BufferA(57).ZWorld = False
+    BufferA(57).ZClearance = 1E+32
+    BufferA(57).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(58) = New Location 
+    BufferA(58).Type = 0
+    BufferA(58).XYZ(-456.6969,463.9232,682.2795,-43.99351,90,180)
+    BufferA(58).ZWorld = False
+    BufferA(58).ZClearance = 1E+32
+    BufferA(58).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(59) = New Location 
+    BufferA(59).Type = 0
+    BufferA(59).XYZ(-372.8987,546.2063,681.0045,-44.03865,90,180)
+    BufferA(59).ZWorld = False
+    BufferA(59).ZClearance = 1E+32
+    BufferA(59).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(60) = New Location 
+    BufferA(60).Type = 0
+    BufferA(60).XYZ(-300.3556,617.6983,681.0003,-47.27801,90,180)
+    BufferA(60).ZWorld = False
+    BufferA(60).ZClearance = 1E+32
+    BufferA(60).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(61) = New Location 
+    BufferA(61).Type = 0
+    BufferA(61).XYZ(-628.8609,295.8696,616.3886,-45.06918,90,180)
+    BufferA(61).ZWorld = False
+    BufferA(61).ZClearance = 1E+32
+    BufferA(61).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(62) = New Location 
+    BufferA(62).Type = 0
+    BufferA(62).XYZ(-550.0865,373.1732,616.3851,-46.62413,90,180)
+    BufferA(62).ZWorld = False
+    BufferA(62).ZClearance = 1E+32
+    BufferA(62).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(63) = New Location 
+    BufferA(63).Type = 0
+    BufferA(63).XYZ(-466.7173,454.612,616.3857,-46.76436,90,180)
+    BufferA(63).ZWorld = False
+    BufferA(63).ZClearance = 1E+32
+    BufferA(63).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(64) = New Location 
+    BufferA(64).Type = 0
+    BufferA(64).XYZ(-377.1541,541.5433,615.57,-45.24513,90,180)
+    BufferA(64).ZWorld = False
+    BufferA(64).ZClearance = 1E+32
+    BufferA(64).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(65) = New Location 
+    BufferA(65).Type = 0
+    BufferA(65).XYZ(-291.606,627.2037,615.5692,-44.38652,90,180)
+    BufferA(65).ZWorld = False
+    BufferA(65).ZClearance = 1E+32
+    BufferA(65).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(66) = New Location 
+    BufferA(66).Type = 0
+    BufferA(66).XYZ(-624.5153,301.3603,549.7764,-43.61695,90,180)
+    BufferA(66).ZWorld = False
+    BufferA(66).ZClearance = 1E+32
+    BufferA(66).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(67) = New Location 
+    BufferA(67).Type = 0
+    BufferA(67).XYZ(-541.494,381.5225,548.8694,-44.04574,90,180)
+    BufferA(67).ZWorld = False
+    BufferA(67).ZClearance = 1E+32
+    BufferA(67).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(68) = New Location 
+    BufferA(68).Type = 0
+    BufferA(68).XYZ(-455.7934,464.2859,548.9001,-43.69507,90,180)
+    BufferA(68).ZWorld = False
+    BufferA(68).ZClearance = 1E+32
+    BufferA(68).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(69) = New Location 
+    BufferA(69).Type = 0
+    BufferA(69).XYZ(-374.9743,545.1756,548.898,-44.05675,90,180)
+    BufferA(69).ZWorld = False
+    BufferA(69).ZClearance = 1E+32
+    BufferA(69).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(70) = New Location 
+    BufferA(70).Type = 0
+    BufferA(70).XYZ(-304.9116,620.8,548.929,-47.33475,90,180)
+    BufferA(70).ZWorld = False
+    BufferA(70).ZClearance = 1E+32
+    BufferA(70).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(71) = New Location 
+    BufferA(71).Type = 0
+    BufferA(71).XYZ(-624.6419,301.159,483.851,-43.38819,90,180)
+    BufferA(71).ZWorld = False
+    BufferA(71).ZClearance = 1E+32
+    BufferA(71).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(72) = New Location 
+    BufferA(72).Type = 0
+    BufferA(72).XYZ(-541.9069,381.9748,482.9604,-43.7861,90,180)
+    BufferA(72).ZWorld = False
+    BufferA(72).ZClearance = 1E+32
+    BufferA(72).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(73) = New Location 
+    BufferA(73).Type = 0
+    BufferA(73).XYZ(-455.9678,465.5692,482.9601,-43.43359,90,180)
+    BufferA(73).ZWorld = False
+    BufferA(73).ZClearance = 1E+32
+    BufferA(73).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(74) = New Location 
+    BufferA(74).Type = 0
+    BufferA(74).XYZ(-372.1911,549.1691,482.9604,-43.28323,90,180)
+    BufferA(74).ZWorld = False
+    BufferA(74).ZClearance = 1E+32
+    BufferA(74).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(75) = New Location 
+    BufferA(75).Type = 0
+    BufferA(75).XYZ(-289.427,631.8351,482.9601,-43.43483,90,180)
+    BufferA(75).ZWorld = False
+    BufferA(75).ZClearance = 1E+32
+    BufferA(75).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(76) = New Location 
+    BufferA(76).Type = 0
+    BufferA(76).XYZ(-627.5026,298.7581,416.9667,-44.04876,90,180)
+    BufferA(76).ZWorld = False
+    BufferA(76).ZClearance = 1E+32
+    BufferA(76).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(77) = New Location 
+    BufferA(77).Type = 0
+    BufferA(77).XYZ(-541.1895,384.3287,416.9664,-43.43893,90,180)
+    BufferA(77).ZWorld = False
+    BufferA(77).ZClearance = 1E+32
+    BufferA(77).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(78) = New Location 
+    BufferA(78).Type = 0
+    BufferA(78).XYZ(-462.2837,461.6035,416.9667,-44.88832,90,180)
+    BufferA(78).ZWorld = False
+    BufferA(78).ZClearance = 1E+32
+    BufferA(78).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(79) = New Location 
+    BufferA(79).Type = 0
+    BufferA(79).XYZ(-378.4328,541.6777,415.9167,-45.15922,90,180)
+    BufferA(79).ZWorld = False
+    BufferA(79).ZClearance = 1E+32
+    BufferA(79).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(80) = New Location 
+    BufferA(80).Type = 0
+    BufferA(80).XYZ(-298.498,622.9542,416.391,-45.77522,90,180)
+    BufferA(80).ZWorld = False
+    BufferA(80).ZClearance = 1E+32
+    BufferA(80).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(81) = New Location 
+    BufferA(81).Type = 0
+    BufferA(81).XYZ(-624.4214,300.714,350.9396,-43.39066,90,180)
+    BufferA(81).ZWorld = False
+    BufferA(81).ZClearance = 1E+32
+    BufferA(81).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(82) = New Location 
+    BufferA(82).Type = 0
+    BufferA(82).XYZ(-542.9863,380.6456,350.9402,-44.07883,90,180)
+    BufferA(82).ZWorld = False
+    BufferA(82).ZClearance = 1E+32
+    BufferA(82).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(83) = New Location 
+    BufferA(83).Type = 0
+    BufferA(83).XYZ(-459.4874,464.795,350.9402,-43.92699,90,180)
+    BufferA(83).ZWorld = False
+    BufferA(83).ZClearance = 1E+32
+    BufferA(83).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(84) = New Location 
+    BufferA(84).Type = 0
+    BufferA(84).XYZ(-373.378,549.1648,350.9402,-43.15432,90,180)
+    BufferA(84).ZWorld = False
+    BufferA(84).ZClearance = 1E+32
+    BufferA(84).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(85) = New Location 
+    BufferA(85).Type = 0
+    BufferA(85).XYZ(-293.5134,627.9225,350.7788,-44.15038,90,180)
+    BufferA(85).ZWorld = False
+    BufferA(85).ZClearance = 1E+32
+    BufferA(85).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(86) = New Location 
+    BufferA(86).Type = 0
+    BufferA(86).XYZ(-627.7974,297.545,283.0107,-44.07253,90,180)
+    BufferA(86).ZWorld = False
+    BufferA(86).ZClearance = 1E+32
+    BufferA(86).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(87) = New Location 
+    BufferA(87).Type = 0
+    BufferA(87).XYZ(-544.8823,379.6318,284.4005,-44.35411,90,180)
+    BufferA(87).ZWorld = False
+    BufferA(87).ZClearance = 1E+32
+    BufferA(87).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(88) = New Location 
+    BufferA(88).Type = 0
+    BufferA(88).XYZ(-461.6087,461.9633,284.4002,-44.53378,90,180)
+    BufferA(88).ZWorld = False
+    BufferA(88).ZClearance = 1E+32
+    BufferA(88).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(89) = New Location 
+    BufferA(89).Type = 0
+    BufferA(89).XYZ(-378.2047,544.6829,284.3997,-44.36868,90,180)
+    BufferA(89).ZWorld = False
+    BufferA(89).ZClearance = 1E+32
+    BufferA(89).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(90) = New Location 
+    BufferA(90).Type = 0
+    BufferA(90).XYZ(-296.0607,624.4263,284.3997,-44.95182,90,180)
+    BufferA(90).ZWorld = False
+    BufferA(90).ZClearance = 1E+32
+    BufferA(90).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(91) = New Location 
+    BufferA(91).Type = 0
+    BufferA(91).XYZ(-621.7119,305.74,218.0485,-41.80218,90,180)
+    BufferA(91).ZWorld = False
+    BufferA(91).ZClearance = 1E+32
+    BufferA(91).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(92) = New Location 
+    BufferA(92).Type = 0
+    BufferA(92).XYZ(-545.5364,379.2101,218.0488,-44.4406,90,180)
+    BufferA(92).ZWorld = False
+    BufferA(92).ZClearance = 1E+32
+    BufferA(92).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(93) = New Location 
+    BufferA(93).Type = 0
+    BufferA(93).XYZ(-457.0211,466.4432,216.2337,-43.17592,90,180)
+    BufferA(93).ZWorld = False
+    BufferA(93).ZClearance = 1E+32
+    BufferA(93).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(94) = New Location 
+    BufferA(94).Type = 0
+    BufferA(94).XYZ(-376.8777,544.2476,217.2837,-44.09619,90,180)
+    BufferA(94).ZWorld = False
+    BufferA(94).ZClearance = 1E+32
+    BufferA(94).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(95) = New Location 
+    BufferA(95).Type = 0
+    BufferA(95).XYZ(-293.3201,628.1503,217.2962,-44.0602,90,180)
+    BufferA(95).ZWorld = False
+    BufferA(95).ZClearance = 1E+32
+    BufferA(95).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(96) = New Location 
+    BufferA(96).Type = 0
+    BufferA(96).XYZ(-627.0932,301.6524,151.2376,-43.33939,90,180)
+    BufferA(96).ZWorld = False
+    BufferA(96).ZClearance = 1E+32
+    BufferA(96).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(97) = New Location 
+    BufferA(97).Type = 0
+    BufferA(97).XYZ(-547.5717,379.8382,151.237,-44.62948,90,180)
+    BufferA(97).ZWorld = False
+    BufferA(97).ZClearance = 1E+32
+    BufferA(97).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(98) = New Location 
+    BufferA(98).Type = 0
+    BufferA(98).XYZ(-456.6612,468.3911,151.2373,-42.87273,90,180)
+    BufferA(98).ZWorld = False
+    BufferA(98).ZClearance = 1E+32
+    BufferA(98).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(99) = New Location 
+    BufferA(99).Type = 0
+    BufferA(99).XYZ(-379.1314,543.513,151.2376,-44.67369,90,180)
+    BufferA(99).ZWorld = False
+    BufferA(99).ZClearance = 1E+32
+    BufferA(99).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferA,100
+    BufferA(100) = New Location 
+    BufferA(100).Type = 0
+    BufferA(100).XYZ(-291.2683,631.0447,151.2186,-43.32229,90,180)
+    BufferA(100).ZWorld = False
+    BufferA(100).ZClearance = 1E+32
+    BufferA(100).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(0) = New Location 
+    BufferB(0).Text = "DO NOT USE ! ! !"
+    BufferB(0).Type = 0
+    BufferB(0).XYZ(0,0,0,0,0,0)
+    BufferB(0).ZWorld = False
+    BufferB(0).ZClearance = 1E+32
+    BufferB(0).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(1) = New Location 
+    BufferB(1).Type = 0
+    BufferB(1).XYZ(-230.4601,655.1923,1413,-91.51902,90,-180)
+    BufferB(1).ZWorld = False
+    BufferB(1).ZClearance = 1E+32
+    BufferB(1).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(2) = New Location 
+    BufferB(2).Type = 0
+    BufferB(2).XYZ(-111.0247,652.5245,1413,-90.83427,90,-180)
+    BufferB(2).ZWorld = False
+    BufferB(2).ZClearance = 1E+32
+    BufferB(2).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(3) = New Location 
+    BufferB(3).Type = 0
+    BufferB(3).XYZ(-0.8338856,653.6352,1409.714,-92.43226,90,-180)
+    BufferB(3).ZWorld = False
+    BufferB(3).ZClearance = 1E+32
+    BufferB(3).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(4) = New Location 
+    BufferB(4).Type = 0
+    BufferB(4).XYZ(118.3875,651.3858,1409.714,-91.99841,90,-180)
+    BufferB(4).ZWorld = False
+    BufferB(4).ZClearance = 1E+32
+    BufferB(4).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(5) = New Location 
+    BufferB(5).Type = 0
+    BufferB(5).XYZ(243.3757,648.1413,1409.714,-90.97131,90,-180)
+    BufferB(5).ZWorld = False
+    BufferB(5).ZClearance = 1E+32
+    BufferB(5).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(6) = New Location 
+    BufferB(6).Type = 0
+    BufferB(6).XYZ(-225.9816,654.7119,1346.113,-90.32298,90,-180)
+    BufferB(6).ZWorld = False
+    BufferB(6).ZClearance = 1E+32
+    BufferB(6).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(7) = New Location 
+    BufferB(7).Type = 0
+    BufferB(7).XYZ(-103.1041,652.709,1343.887,-89.04776,90,180)
+    BufferB(7).ZWorld = False
+    BufferB(7).ZClearance = 1E+32
+    BufferB(7).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(8) = New Location 
+    BufferB(8).Type = 0
+    BufferB(8).XYZ(10.56207,651.6168,1343.743,-89.89661,90,180)
+    BufferB(8).ZWorld = False
+    BufferB(8).ZClearance = 1E+32
+    BufferB(8).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(9) = New Location 
+    BufferB(9).Type = 0
+    BufferB(9).XYZ(126.3306,650.6897,1342.841,-90.35172,90,-180)
+    BufferB(9).ZWorld = False
+    BufferB(9).ZClearance = 1E+32
+    BufferB(9).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(10) = New Location 
+    BufferB(10).Type = 0
+    BufferB(10).XYZ(246.7354,649.3708,1342.839,-89.93824,90,180)
+    BufferB(10).ZWorld = False
+    BufferB(10).ZClearance = 1E+32
+    BufferB(10).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(11) = New Location 
+    BufferB(11).Type = 0
+    BufferB(11).XYZ(-222.7797,655.4553,1278.411,-89.61549,90,180)
+    BufferB(11).ZWorld = False
+    BufferB(11).ZClearance = 1E+32
+    BufferB(11).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(12) = New Location 
+    BufferB(12).Type = 0
+    BufferB(12).XYZ(-115.2502,654.1993,1276.533,-91.32896,90,-180)
+    BufferB(12).ZWorld = False
+    BufferB(12).ZClearance = 1E+32
+    BufferB(12).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(13) = New Location 
+    BufferB(13).Type = 0
+    BufferB(13).XYZ(6.834582,653.113,1276.532,-90.43597,90,-180)
+    BufferB(13).ZWorld = False
+    BufferB(13).ZClearance = 1E+32
+    BufferB(13).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(14) = New Location 
+    BufferB(14).Type = 0
+    BufferB(14).XYZ(124.8952,651.9586,1276.531,-90.43,90,-180)
+    BufferB(14).ZWorld = False
+    BufferB(14).ZClearance = 1E+32
+    BufferB(14).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(15) = New Location 
+    BufferB(15).Type = 0
+    BufferB(15).XYZ(242.009,651.1777,1275.331,-90.56216,90,-180)
+    BufferB(15).ZWorld = False
+    BufferB(15).ZClearance = 1E+32
+    BufferB(15).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(16) = New Location 
+    BufferB(16).Type = 0
+    BufferB(16).XYZ(-231.2229,655.0388,1211.136,-90.76271,90,-180)
+    BufferB(16).ZWorld = False
+    BufferB(16).ZClearance = 1E+32
+    BufferB(16).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(17) = New Location 
+    BufferB(17).Type = 0
+    BufferB(17).XYZ(-110.1824,653.1254,1211.103,-90.04511,90,-180)
+    BufferB(17).ZWorld = False
+    BufferB(17).ZClearance = 1E+32
+    BufferB(17).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(18) = New Location 
+    BufferB(18).Type = 0
+    BufferB(18).XYZ(9.049691,652.2928,1211.1,-90.0022,90,-180)
+    BufferB(18).ZWorld = False
+    BufferB(18).ZClearance = 1E+32
+    BufferB(18).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(19) = New Location 
+    BufferB(19).Type = 0
+    BufferB(19).XYZ(123.9684,650.593,1211.074,-90.39796,90,-180)
+    BufferB(19).ZWorld = False
+    BufferB(19).ZClearance = 1E+32
+    BufferB(19).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(20) = New Location 
+    BufferB(20).Type = 0
+    BufferB(20).XYZ(245.9284,650.178,1208.745,-89.6953,90,180)
+    BufferB(20).ZWorld = False
+    BufferB(20).ZClearance = 1E+32
+    BufferB(20).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(21) = New Location 
+    BufferB(21).Type = 0
+    BufferB(21).XYZ(-224.4732,655.3516,1145.057,-89.70712,90,180)
+    BufferB(21).ZWorld = False
+    BufferB(21).ZClearance = 1E+32
+    BufferB(21).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(22) = New Location 
+    BufferB(22).Type = 0
+    BufferB(22).XYZ(-103.7952,653.6387,1143.471,-89.04327,90,180)
+    BufferB(22).ZWorld = False
+    BufferB(22).ZClearance = 1E+32
+    BufferB(22).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(23) = New Location 
+    BufferB(23).Type = 0
+    BufferB(23).XYZ(16.10327,652.2648,1142.761,-88.48595,90,180)
+    BufferB(23).ZWorld = False
+    BufferB(23).ZClearance = 1E+32
+    BufferB(23).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(24) = New Location 
+    BufferB(24).Type = 0
+    BufferB(24).XYZ(122.0307,651.304,1142.669,-90.86703,90,-180)
+    BufferB(24).ZWorld = False
+    BufferB(24).ZClearance = 1E+32
+    BufferB(24).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(25) = New Location 
+    BufferB(25).Type = 0
+    BufferB(25).XYZ(235.2046,650.5364,1142.668,-91.65913,90,-180)
+    BufferB(25).ZWorld = False
+    BufferB(25).ZClearance = 1E+32
+    BufferB(25).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(26) = New Location 
+    BufferB(26).Type = 0
+    BufferB(26).XYZ(-233.8658,655.9514,1078.71,-91.41424,90,-180)
+    BufferB(26).ZWorld = False
+    BufferB(26).ZClearance = 1E+32
+    BufferB(26).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(27) = New Location 
+    BufferB(27).Type = 0
+    BufferB(27).XYZ(-113.0391,653.984,1078.708,-90.549,90,-180)
+    BufferB(27).ZWorld = False
+    BufferB(27).ZClearance = 1E+32
+    BufferB(27).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(28) = New Location 
+    BufferB(28).Type = 0
+    BufferB(28).XYZ(12.43736,652.1628,1077.025,-89.01748,90,180)
+    BufferB(28).ZWorld = False
+    BufferB(28).ZClearance = 1E+32
+    BufferB(28).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(29) = New Location 
+    BufferB(29).Type = 0
+    BufferB(29).XYZ(122.956,651.6621,1077.066,-90.50571,90,-180)
+    BufferB(29).ZWorld = False
+    BufferB(29).ZClearance = 1E+32
+    BufferB(29).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(30) = New Location 
+    BufferB(30).Type = 0
+    BufferB(30).XYZ(232.1836,650.7916,1077.065,-92.20715,90,-180)
+    BufferB(30).ZWorld = False
+    BufferB(30).ZClearance = 1E+32
+    BufferB(30).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(31) = New Location 
+    BufferB(31).Type = 0
+    BufferB(31).XYZ(-222.086,655.9246,1011.905,-88.88901,90,180)
+    BufferB(31).ZWorld = False
+    BufferB(31).ZClearance = 1E+32
+    BufferB(31).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(32) = New Location 
+    BufferB(32).Type = 0
+    BufferB(32).XYZ(-106.0318,654.3741,1011.904,-89.14779,90,180)
+    BufferB(32).ZWorld = False
+    BufferB(32).ZClearance = 1E+32
+    BufferB(32).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(33) = New Location 
+    BufferB(33).Type = 0
+    BufferB(33).XYZ(8.724837,653.0414,1011.878,-89.64631,90,180)
+    BufferB(33).ZWorld = False
+    BufferB(33).ZClearance = 1E+32
+    BufferB(33).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(34) = New Location 
+    BufferB(34).Type = 0
+    BufferB(34).XYZ(117.3548,652.0267,1011.866,-91.47169,90,-180)
+    BufferB(34).ZWorld = False
+    BufferB(34).ZClearance = 1E+32
+    BufferB(34).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(35) = New Location 
+    BufferB(35).Type = 0
+    BufferB(35).XYZ(225.5228,651.1385,1009.926,-93.45069,90,-180)
+    BufferB(35).ZWorld = False
+    BufferB(35).ZClearance = 1E+32
+    BufferB(35).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(36) = New Location 
+    BufferB(36).Type = 0
+    BufferB(36).XYZ(-232.9149,656.3505,946.2569,-90.94392,90,-180)
+    BufferB(36).ZWorld = False
+    BufferB(36).ZClearance = 1E+32
+    BufferB(36).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(37) = New Location 
+    BufferB(37).Type = 0
+    BufferB(37).XYZ(-115.1839,654.6626,946.254,-90.87208,90,-180)
+    BufferB(37).ZWorld = False
+    BufferB(37).ZClearance = 1E+32
+    BufferB(37).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(38) = New Location 
+    BufferB(38).Type = 0
+    BufferB(38).XYZ(6.173874,653.095,945.2831,-90.13866,90,-180)
+    BufferB(38).ZWorld = False
+    BufferB(38).ZClearance = 1E+32
+    BufferB(38).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(39) = New Location 
+    BufferB(39).Type = 0
+    BufferB(39).XYZ(120.9787,651.4556,945.2756,-90.93499,90,-180)
+    BufferB(39).ZWorld = False
+    BufferB(39).ZClearance = 1E+32
+    BufferB(39).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(40) = New Location 
+    BufferB(40).Type = 0
+    BufferB(40).XYZ(236.429,650.8241,943.7966,-91.03574,90,-180)
+    BufferB(40).ZWorld = False
+    BufferB(40).ZClearance = 1E+32
+    BufferB(40).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(41) = New Location 
+    BufferB(41).Type = 0
+    BufferB(41).XYZ(-235.012,655.7021,879.5908,-90.99394,90,-180)
+    BufferB(41).ZWorld = False
+    BufferB(41).ZClearance = 1E+32
+    BufferB(41).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(42) = New Location 
+    BufferB(42).Type = 0
+    BufferB(42).XYZ(-112.2031,654.5538,878.8971,-90.11797,90,-180)
+    BufferB(42).ZWorld = False
+    BufferB(42).ZClearance = 1E+32
+    BufferB(42).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(43) = New Location 
+    BufferB(43).Type = 0
+    BufferB(43).XYZ(2.630447,653.1326,878.8058,-90.65495,90,-180)
+    BufferB(43).ZWorld = False
+    BufferB(43).ZClearance = 1E+32
+    BufferB(43).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(44) = New Location 
+    BufferB(44).Type = 0
+    BufferB(44).XYZ(121.1349,651.9048,877.0672,-90.51214,90,-180)
+    BufferB(44).ZWorld = False
+    BufferB(44).ZClearance = 1E+32
+    BufferB(44).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(45) = New Location 
+    BufferB(45).Type = 0
+    BufferB(45).XYZ(234.3789,651.3054,877.6069,-91.40007,90,-180)
+    BufferB(45).ZWorld = False
+    BufferB(45).ZClearance = 1E+32
+    BufferB(45).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(46) = New Location 
+    BufferB(46).Type = 0
+    BufferB(46).XYZ(-229.71,656.4062,814.2679,-90.03475,90,-180)
+    BufferB(46).ZWorld = False
+    BufferB(46).ZClearance = 1E+32
+    BufferB(46).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(47) = New Location 
+    BufferB(47).Type = 0
+    BufferB(47).XYZ(-115.3195,654.4922,814.2465,-90.52584,90,-180)
+    BufferB(47).ZWorld = False
+    BufferB(47).ZClearance = 1E+32
+    BufferB(47).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(48) = New Location 
+    BufferB(48).Type = 0
+    BufferB(48).XYZ(3.882895,653.5206,814.5486,-90.34817,90,-180)
+    BufferB(48).ZWorld = False
+    BufferB(48).ZClearance = 1E+32
+    BufferB(48).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(49) = New Location 
+    BufferB(49).Type = 0
+    BufferB(49).XYZ(121.5419,652.4673,811.383,-90.29936,90,-180)
+    BufferB(49).ZWorld = False
+    BufferB(49).ZClearance = 1E+32
+    BufferB(49).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(50) = New Location 
+    BufferB(50).Type = 0
+    BufferB(50).XYZ(239.9435,651.3702,811.2816,-90.17589,90,-180)
+    BufferB(50).ZWorld = False
+    BufferB(50).ZClearance = 1E+32
+    BufferB(50).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(51) = New Location 
+    BufferB(51).Type = 0
+    BufferB(51).XYZ(-226.006,656.4727,747.4621,-89.10285,90,180)
+    BufferB(51).ZWorld = False
+    BufferB(51).ZClearance = 1E+32
+    BufferB(51).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(52) = New Location 
+    BufferB(52).Type = 0
+    BufferB(52).XYZ(-112.8907,655.1026,747.4499,-89.95333,90,180)
+    BufferB(52).ZWorld = False
+    BufferB(52).ZClearance = 1E+32
+    BufferB(52).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(53) = New Location 
+    BufferB(53).Type = 0
+    BufferB(53).XYZ(4.53148,653.6727,746.4487,-90.0468,90,-180)
+    BufferB(53).ZWorld = False
+    BufferB(53).ZClearance = 1E+32
+    BufferB(53).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(54) = New Location 
+    BufferB(54).Type = 0
+    BufferB(54).XYZ(121.3268,652.6691,745.0535,-90.21593,90,-180)
+    BufferB(54).ZWorld = False
+    BufferB(54).ZClearance = 1E+32
+    BufferB(54).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(55) = New Location 
+    BufferB(55).Type = 0
+    BufferB(55).XYZ(231.4446,651.9622,744.4907,-91.72871,90,-180)
+    BufferB(55).ZWorld = False
+    BufferB(55).ZClearance = 1E+32
+    BufferB(55).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(56) = New Location 
+    BufferB(56).Type = 0
+    BufferB(56).XYZ(-228.1979,657.2134,680.6197,-89.4373,90,180)
+    BufferB(56).ZWorld = False
+    BufferB(56).ZClearance = 1E+32
+    BufferB(56).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(57) = New Location 
+    BufferB(57).Type = 0
+    BufferB(57).XYZ(-115.7731,655.6333,680.1775,-90.45645,90,-180)
+    BufferB(57).ZWorld = False
+    BufferB(57).ZClearance = 1E+32
+    BufferB(57).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(58) = New Location 
+    BufferB(58).Type = 0
+    BufferB(58).XYZ(-2.712157,654.2737,679.5519,-91.39422,90,-180)
+    BufferB(58).ZWorld = False
+    BufferB(58).ZClearance = 1E+32
+    BufferB(58).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(59) = New Location 
+    BufferB(59).Type = 0
+    BufferB(59).XYZ(118.693,653.1456,679.7523,-90.63627,90,-180)
+    BufferB(59).ZWorld = False
+    BufferB(59).ZClearance = 1E+32
+    BufferB(59).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(60) = New Location 
+    BufferB(60).Type = 0
+    BufferB(60).XYZ(235.6421,652.0714,677.9037,-90.68295,90,-180)
+    BufferB(60).ZWorld = False
+    BufferB(60).ZClearance = 1E+32
+    BufferB(60).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(61) = New Location 
+    BufferB(61).Type = 0
+    BufferB(61).XYZ(-226.3636,657.2798,614.79,-88.94113,90,180)
+    BufferB(61).ZWorld = False
+    BufferB(61).ZClearance = 1E+32
+    BufferB(61).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(62) = New Location 
+    BufferB(62).Type = 0
+    BufferB(62).XYZ(-113.786,655.3224,614.6063,-89.94287,90,180)
+    BufferB(62).ZWorld = False
+    BufferB(62).ZClearance = 1E+32
+    BufferB(62).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(63) = New Location 
+    BufferB(63).Type = 0
+    BufferB(63).XYZ(2.157665,654.2679,613.719,-90.25571,90,-180)
+    BufferB(63).ZWorld = False
+    BufferB(63).ZClearance = 1E+32
+    BufferB(63).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(64) = New Location 
+    BufferB(64).Type = 0
+    BufferB(64).XYZ(115.6101,653.1959,613.0699,-91.06226,90,-180)
+    BufferB(64).ZWorld = False
+    BufferB(64).ZClearance = 1E+32
+    BufferB(64).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(65) = New Location 
+    BufferB(65).Type = 0
+    BufferB(65).XYZ(241.7728,652.4633,612.16,-89.38194,90,180)
+    BufferB(65).ZWorld = False
+    BufferB(65).ZClearance = 1E+32
+    BufferB(65).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(66) = New Location 
+    BufferB(66).Type = 0
+    BufferB(66).XYZ(-233.1681,657.5489,549.2078,-90.09779,90,-180)
+    BufferB(66).ZWorld = False
+    BufferB(66).ZClearance = 1E+32
+    BufferB(66).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(67) = New Location 
+    BufferB(67).Type = 0
+    BufferB(67).XYZ(-115.2587,655.5242,547.3785,-90.06719,90,-180)
+    BufferB(67).ZWorld = False
+    BufferB(67).ZClearance = 1E+32
+    BufferB(67).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(68) = New Location 
+    BufferB(68).Type = 0
+    BufferB(68).XYZ(0.4107615,654.7393,547.377,-90.41638,90,-180)
+    BufferB(68).ZWorld = False
+    BufferB(68).ZClearance = 1E+32
+    BufferB(68).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(69) = New Location 
+    BufferB(69).Type = 0
+    BufferB(69).XYZ(115.6749,653.6747,547.3738,-90.9286,90,-180)
+    BufferB(69).ZWorld = False
+    BufferB(69).ZClearance = 1E+32
+    BufferB(69).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(70) = New Location 
+    BufferB(70).Type = 0
+    BufferB(70).XYZ(223.7771,653.124,546.4189,-92.83701,90,-180)
+    BufferB(70).ZWorld = False
+    BufferB(70).ZClearance = 1E+32
+    BufferB(70).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(71) = New Location 
+    BufferB(71).Type = 0
+    BufferB(71).XYZ(-233.4757,657.575,482.4975,-90.07069,90,-180)
+    BufferB(71).ZWorld = False
+    BufferB(71).ZClearance = 1E+32
+    BufferB(71).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(72) = New Location 
+    BufferB(72).Type = 0
+    BufferB(72).XYZ(-111.8382,655.12,482.4954,-89.02792,90,180)
+    BufferB(72).ZWorld = False
+    BufferB(72).ZClearance = 1E+32
+    BufferB(72).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(73) = New Location 
+    BufferB(73).Type = 0
+    BufferB(73).XYZ(1.928165,654.5344,480.8353,-90.02886,90,-180)
+    BufferB(73).ZWorld = False
+    BufferB(73).ZClearance = 1E+32
+    BufferB(73).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(74) = New Location 
+    BufferB(74).Type = 0
+    BufferB(74).XYZ(118.4349,653.6639,480.8311,-90.22042,90,-180)
+    BufferB(74).ZWorld = False
+    BufferB(74).ZClearance = 1E+32
+    BufferB(74).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(75) = New Location 
+    BufferB(75).Type = 0
+    BufferB(75).XYZ(229.4709,653.1118,480.8308,-91.60632,90,-180)
+    BufferB(75).ZWorld = False
+    BufferB(75).ZClearance = 1E+32
+    BufferB(75).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(76) = New Location 
+    BufferB(76).Type = 0
+    BufferB(76).XYZ(-227.0719,657.6547,415.7038,-88.66238,90,180)
+    BufferB(76).ZWorld = False
+    BufferB(76).ZClearance = 1E+32
+    BufferB(76).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(77) = New Location 
+    BufferB(77).Type = 0
+    BufferB(77).XYZ(-119.7039,656.3706,415.7032,-90.69196,90,-180)
+    BufferB(77).ZWorld = False
+    BufferB(77).ZClearance = 1E+32
+    BufferB(77).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(78) = New Location 
+    BufferB(78).Type = 0
+    BufferB(78).XYZ(2.97035,655.0859,415.7006,-89.65231,90,180)
+    BufferB(78).ZWorld = False
+    BufferB(78).ZClearance = 1E+32
+    BufferB(78).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(79) = New Location 
+    BufferB(79).Type = 0
+    BufferB(79).XYZ(95.17461,654.8326,413.38,-94.96342,90,-180)
+    BufferB(79).ZWorld = False
+    BufferB(79).ZClearance = 1E+32
+    BufferB(79).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(80) = New Location 
+    BufferB(80).Type = 0
+    BufferB(80).XYZ(230.6337,653.372,413.3788,-91.23627,90,-180)
+    BufferB(80).ZWorld = False
+    BufferB(80).ZClearance = 1E+32
+    BufferB(80).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(81) = New Location 
+    BufferB(81).Type = 0
+    BufferB(81).XYZ(-228.3665,657.9169,348.835,-88.68731,90,180)
+    BufferB(81).ZWorld = False
+    BufferB(81).ZClearance = 1E+32
+    BufferB(81).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(82) = New Location 
+    BufferB(82).Type = 0
+    BufferB(82).XYZ(-118.0392,656.8447,349.8701,-90.16688,90,-180)
+    BufferB(82).ZWorld = False
+    BufferB(82).ZClearance = 1E+32
+    BufferB(82).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(83) = New Location 
+    BufferB(83).Type = 0
+    BufferB(83).XYZ(-2.560613,655.5148,349.1588,-90.66161,90,-180)
+    BufferB(83).ZWorld = False
+    BufferB(83).ZClearance = 1E+32
+    BufferB(83).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(84) = New Location 
+    BufferB(84).Type = 0
+    BufferB(84).XYZ(116.4778,654.4217,349.1561,-90.41438,90,-180)
+    BufferB(84).ZWorld = False
+    BufferB(84).ZClearance = 1E+32
+    BufferB(84).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(85) = New Location 
+    BufferB(85).Type = 0
+    BufferB(85).XYZ(233.1122,653.7112,347.5358,-90.60899,90,-180)
+    BufferB(85).ZWorld = False
+    BufferB(85).ZClearance = 1E+32
+    BufferB(85).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(86) = New Location 
+    BufferB(86).Type = 0
+    BufferB(86).XYZ(-229.5604,658.0095,283.0705,-88.90113,90,180)
+    BufferB(86).ZWorld = False
+    BufferB(86).ZClearance = 1E+32
+    BufferB(86).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(87) = New Location 
+    BufferB(87).Type = 0
+    BufferB(87).XYZ(-114.4493,656.3799,283.0717,-89.32436,90,180)
+    BufferB(87).ZWorld = False
+    BufferB(87).ZClearance = 1E+32
+    BufferB(87).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(88) = New Location 
+    BufferB(88).Type = 0
+    BufferB(88).XYZ(2.224162,655.5472,283.0708,-89.55923,90,180)
+    BufferB(88).ZWorld = False
+    BufferB(88).ZClearance = 1E+32
+    BufferB(88).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(89) = New Location 
+    BufferB(89).Type = 0
+    BufferB(89).XYZ(126.2112,654.5612,283.0675,-88.37243,90,180)
+    BufferB(89).ZWorld = False
+    BufferB(89).ZClearance = 1E+32
+    BufferB(89).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(90) = New Location 
+    BufferB(90).Type = 0
+    BufferB(90).XYZ(238.5221,653.911,281.5213,-89.4295,90,180)
+    BufferB(90).ZWorld = False
+    BufferB(90).ZClearance = 1E+32
+    BufferB(90).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(91) = New Location 
+    BufferB(91).Type = 0
+    BufferB(91).XYZ(-233.5174,658.2607,217.4966,-89.4818,90,180)
+    BufferB(91).ZWorld = False
+    BufferB(91).ZClearance = 1E+32
+    BufferB(91).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(92) = New Location 
+    BufferB(92).Type = 0
+    BufferB(92).XYZ(-115.0017,656.8373,217.5007,-89.23999,90,180)
+    BufferB(92).ZWorld = False
+    BufferB(92).ZClearance = 1E+32
+    BufferB(92).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(93) = New Location 
+    BufferB(93).Type = 0
+    BufferB(93).XYZ(-10.0042,656.0018,214.1064,-91.78755,90,-180)
+    BufferB(93).ZWorld = False
+    BufferB(93).ZClearance = 1E+32
+    BufferB(93).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(94) = New Location 
+    BufferB(94).Type = 0
+    BufferB(94).XYZ(115.891,655.1005,213.97,-90.1547,90,-180)
+    BufferB(94).ZWorld = False
+    BufferB(94).ZClearance = 1E+32
+    BufferB(94).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(95) = New Location 
+    BufferB(95).Type = 0
+    BufferB(95).XYZ(236.1156,653.8374,213.9857,-89.69245,90,180)
+    BufferB(95).ZWorld = False
+    BufferB(95).ZClearance = 1E+32
+    BufferB(95).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(96) = New Location 
+    BufferB(96).Type = 0
+    BufferB(96).XYZ(-244.0681,658.5596,150.8695,-91.46718,90,-180)
+    BufferB(96).ZWorld = False
+    BufferB(96).ZClearance = 1E+32
+    BufferB(96).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(97) = New Location 
+    BufferB(97).Type = 0
+    BufferB(97).XYZ(-108.8905,656.1697,150.8457,-87.66218,90,180)
+    BufferB(97).ZWorld = False
+    BufferB(97).ZClearance = 1E+32
+    BufferB(97).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(98) = New Location 
+    BufferB(98).Type = 0
+    BufferB(98).XYZ(-1.420333,655.9714,149.0952,-90.0177,90,-180)
+    BufferB(98).ZWorld = False
+    BufferB(98).ZClearance = 1E+32
+    BufferB(98).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(99) = New Location 
+    BufferB(99).Type = 0
+    BufferB(99).XYZ(116.4259,655.059,149.0943,-90.03015,90,-180)
+    BufferB(99).ZWorld = False
+    BufferB(99).ZClearance = 1E+32
+    BufferB(99).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferB,100
+    BufferB(100) = New Location 
+    BufferB(100).Type = 0
+    BufferB(100).XYZ(230.4086,654.1339,147.8269,-90.75672,90,-180)
+    BufferB(100).ZWorld = False
+    BufferB(100).ZClearance = 1E+32
+    BufferB(100).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(0) = New Location 
+    BufferC(0).Text = "DO NOT USE"
+    BufferC(0).Type = 0
+    BufferC(0).XYZ(0,0,0,0,0,0)
+    BufferC(0).ZWorld = False
+    BufferC(0).ZClearance = 1E+32
+    BufferC(0).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(1) = New Location 
+    BufferC(1).Type = 0
+    BufferC(1).XYZ(300.2347,627.4055,1404.43,-132.4159,90,-180)
+    BufferC(1).ZWorld = False
+    BufferC(1).ZClearance = 1E+32
+    BufferC(1).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(2) = New Location 
+    BufferC(2).Type = 0
+    BufferC(2).XYZ(381.8118,543.414,1404.409,-132.4535,90,-180)
+    BufferC(2).ZWorld = False
+    BufferC(2).ZClearance = 1E+32
+    BufferC(2).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(3) = New Location 
+    BufferC(3).Type = 0
+    BufferC(3).XYZ(456.7728,467.1749,1404.364,-134.4447,90,-180)
+    BufferC(3).ZWorld = False
+    BufferC(3).ZClearance = 1E+32
+    BufferC(3).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(4) = New Location 
+    BufferC(4).Type = 0
+    BufferC(4).XYZ(545.4136,378.1277,1404.338,-132.7375,90,-180)
+    BufferC(4).ZWorld = False
+    BufferC(4).ZClearance = 1E+32
+    BufferC(4).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(5) = New Location 
+    BufferC(5).Type = 0
+    BufferC(5).XYZ(632.0325,292.2813,1404.336,-131.8857,90,-180)
+    BufferC(5).ZWorld = False
+    BufferC(5).ZClearance = 1E+32
+    BufferC(5).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(6) = New Location 
+    BufferC(6).Type = 0
+    BufferC(6).XYZ(297.3867,626.431,1337.662,-132.6165,90,-180)
+    BufferC(6).ZWorld = False
+    BufferC(6).ZClearance = 1E+32
+    BufferC(6).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(7) = New Location 
+    BufferC(7).Type = 0
+    BufferC(7).XYZ(383.5294,542.6447,1337.662,-132.0627,90,-180)
+    BufferC(7).ZWorld = False
+    BufferC(7).ZClearance = 1E+32
+    BufferC(7).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(8) = New Location 
+    BufferC(8).Type = 0
+    BufferC(8).XYZ(466.4366,458.6024,1337.662,-131.8727,90,-180)
+    BufferC(8).ZWorld = False
+    BufferC(8).ZClearance = 1E+32
+    BufferC(8).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(9) = New Location 
+    BufferC(9).Type = 0
+    BufferC(9).XYZ(545.4764,379.8631,1337.662,-133.062,90,-180)
+    BufferC(9).ZWorld = False
+    BufferC(9).ZClearance = 1E+32
+    BufferC(9).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(10) = New Location 
+    BufferC(10).Type = 0
+    BufferC(10).XYZ(631.5714,294.2837,1337.649,-132.1946,90,-180)
+    BufferC(10).ZWorld = False
+    BufferC(10).ZClearance = 1E+32
+    BufferC(10).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(11) = New Location 
+    BufferC(11).Type = 0
+    BufferC(11).XYZ(299.5838,626.1716,1272.13,-132.2139,90,-180)
+    BufferC(11).ZWorld = False
+    BufferC(11).ZClearance = 1E+32
+    BufferC(11).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(12) = New Location 
+    BufferC(12).Type = 0
+    BufferC(12).XYZ(378.2951,548.1026,1272.115,-133.5605,90,-180)
+    BufferC(12).ZWorld = False
+    BufferC(12).ZClearance = 1E+32
+    BufferC(12).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(13) = New Location 
+    BufferC(13).Type = 0
+    BufferC(13).XYZ(460.2095,465.3586,1272.087,-133.8357,90,-180)
+    BufferC(13).ZWorld = False
+    BufferC(13).ZClearance = 1E+32
+    BufferC(13).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(14) = New Location 
+    BufferC(14).Type = 0
+    BufferC(14).XYZ(542.1471,383.2059,1272.051,-133.9341,90,-180)
+    BufferC(14).ZWorld = False
+    BufferC(14).ZClearance = 1E+32
+    BufferC(14).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(15) = New Location 
+    BufferC(15).Type = 0
+    BufferC(15).XYZ(624.3936,299.1117,1272.042,-133.9139,90,-180)
+    BufferC(15).ZWorld = False
+    BufferC(15).ZClearance = 1E+32
+    BufferC(15).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(16) = New Location 
+    BufferC(16).Type = 0
+    BufferC(16).XYZ(297.2295,627.6042,1206.393,-132.6632,90,-180)
+    BufferC(16).ZWorld = False
+    BufferC(16).ZClearance = 1E+32
+    BufferC(16).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(17) = New Location 
+    BufferC(17).Type = 0
+    BufferC(17).XYZ(382.6363,542.8115,1205.569,-132.2056,90,-180)
+    BufferC(17).ZWorld = False
+    BufferC(17).ZClearance = 1E+32
+    BufferC(17).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(18) = New Location 
+    BufferC(18).Type = 0
+    BufferC(18).XYZ(462.1947,461.3559,1205.568,-132.6716,90,-180)
+    BufferC(18).ZWorld = False
+    BufferC(18).ZClearance = 1E+32
+    BufferC(18).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(19) = New Location 
+    BufferC(19).Type = 0
+    BufferC(19).XYZ(548.6449,375.9136,1205.568,-131.9059,90,-180)
+    BufferC(19).ZWorld = False
+    BufferC(19).ZClearance = 1E+32
+    BufferC(19).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(20) = New Location 
+    BufferC(20).Type = 0
+    BufferC(20).XYZ(630.9446,294.1215,1205.567,-132.2398,90,-180)
+    BufferC(20).ZWorld = False
+    BufferC(20).ZClearance = 1E+32
+    BufferC(20).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(21) = New Location 
+    BufferC(21).Type = 0
+    BufferC(21).XYZ(294.5009,629.642,1138.407,-133.2791,90,-180)
+    BufferC(21).ZWorld = False
+    BufferC(21).ZClearance = 1E+32
+    BufferC(21).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(22) = New Location 
+    BufferC(22).Type = 0
+    BufferC(22).XYZ(379.9667,545.7722,1138.405,-132.7988,90,-180)
+    BufferC(22).ZWorld = False
+    BufferC(22).ZClearance = 1E+32
+    BufferC(22).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(23) = New Location 
+    BufferC(23).Type = 0
+    BufferC(23).XYZ(462.5666,462.5186,1138.399,-132.877,90,-180)
+    BufferC(23).ZWorld = False
+    BufferC(23).ZClearance = 1E+32
+    BufferC(23).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(24) = New Location 
+    BufferC(24).Type = 0
+    BufferC(24).XYZ(548.8463,374.4624,1138.39,-131.5754,90,-180)
+    BufferC(24).ZWorld = False
+    BufferC(24).ZClearance = 1E+32
+    BufferC(24).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(25) = New Location 
+    BufferC(25).Type = 0
+    BufferC(25).XYZ(630.623,295.043,1138.385,-132.1524,90,-180)
+    BufferC(25).ZWorld = False
+    BufferC(25).ZClearance = 1E+32
+    BufferC(25).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(26) = New Location 
+    BufferC(26).Type = 0
+    BufferC(26).XYZ(302.1422,623.5143,1072.941,-131.1682,90,-180)
+    BufferC(26).ZWorld = False
+    BufferC(26).ZClearance = 1E+32
+    BufferC(26).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(27) = New Location 
+    BufferC(27).Type = 0
+    BufferC(27).XYZ(381.7615,542.7398,1072.93,-132.0613,90,-180)
+    BufferC(27).ZWorld = False
+    BufferC(27).ZClearance = 1E+32
+    BufferC(27).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(28) = New Location 
+    BufferC(28).Type = 0
+    BufferC(28).XYZ(465.8279,458.4977,1072.914,-131.613,90,-180)
+    BufferC(28).ZWorld = False
+    BufferC(28).ZClearance = 1E+32
+    BufferC(28).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(29) = New Location 
+    BufferC(29).Type = 0
+    BufferC(29).XYZ(549.076,375.8472,1072.908,-131.6598,90,-180)
+    BufferC(29).ZWorld = False
+    BufferC(29).ZClearance = 1E+32
+    BufferC(29).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(30) = New Location 
+    BufferC(30).Type = 0
+    BufferC(30).XYZ(629.8003,294.1137,1072.862,-132.0878,90,-180)
+    BufferC(30).ZWorld = False
+    BufferC(30).ZClearance = 1E+32
+    BufferC(30).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(31) = New Location 
+    BufferC(31).Type = 0
+    BufferC(31).XYZ(299.6463,624.6517,1007.732,-131.7154,90,-180)
+    BufferC(31).ZWorld = False
+    BufferC(31).ZClearance = 1E+32
+    BufferC(31).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(32) = New Location 
+    BufferC(32).Type = 0
+    BufferC(32).XYZ(379.1795,546.6685,1007.731,-132.9104,90,-180)
+    BufferC(32).ZWorld = False
+    BufferC(32).ZClearance = 1E+32
+    BufferC(32).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(33) = New Location 
+    BufferC(33).Type = 0
+    BufferC(33).XYZ(464.2672,457.8808,1005.252,-131.8167,90,-180)
+    BufferC(33).ZWorld = False
+    BufferC(33).ZClearance = 1E+32
+    BufferC(33).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(34) = New Location 
+    BufferC(34).Type = 0
+    BufferC(34).XYZ(545.8841,378.7697,1005.251,-132.5623,90,-180)
+    BufferC(34).ZWorld = False
+    BufferC(34).ZClearance = 1E+32
+    BufferC(34).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(35) = New Location 
+    BufferC(35).Type = 0
+    BufferC(35).XYZ(626.4932,297.9436,1005.245,-133.1894,90,-180)
+    BufferC(35).ZWorld = False
+    BufferC(35).ZClearance = 1E+32
+    BufferC(35).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(36) = New Location 
+    BufferC(36).Type = 0
+    BufferC(36).XYZ(296.0757,629.0818,940.2192,-132.7504,90,-180)
+    BufferC(36).ZWorld = False
+    BufferC(36).ZClearance = 1E+32
+    BufferC(36).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(37) = New Location 
+    BufferC(37).Type = 0
+    BufferC(37).XYZ(380.7541,544.1889,940.2189,-132.4037,90,-180)
+    BufferC(37).ZWorld = False
+    BufferC(37).ZClearance = 1E+32
+    BufferC(37).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(38) = New Location 
+    BufferC(38).Type = 0
+    BufferC(38).XYZ(465.2558,458.3063,940.2186,-131.6965,90,-180)
+    BufferC(38).ZWorld = False
+    BufferC(38).ZClearance = 1E+32
+    BufferC(38).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(39) = New Location 
+    BufferC(39).Type = 0
+    BufferC(39).XYZ(548.6842,375.9015,940.2183,-131.6995,90,-180)
+    BufferC(39).ZWorld = False
+    BufferC(39).ZClearance = 1E+32
+    BufferC(39).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(40) = New Location 
+    BufferC(40).Type = 0
+    BufferC(40).XYZ(633.8091,291.936,939.8186,-131.2212,90,-180)
+    BufferC(40).ZWorld = False
+    BufferC(40).ZClearance = 1E+32
+    BufferC(40).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(41) = New Location 
+    BufferC(41).Type = 0
+    BufferC(41).XYZ(299.835,625.2047,873.9417,-131.5122,90,-180)
+    BufferC(41).ZWorld = False
+    BufferC(41).ZClearance = 1E+32
+    BufferC(41).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(42) = New Location 
+    BufferC(42).Type = 0
+    BufferC(42).XYZ(380.6566,544.3934,873.9316,-132.2854,90,-180)
+    BufferC(42).ZWorld = False
+    BufferC(42).ZClearance = 1E+32
+    BufferC(42).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(43) = New Location 
+    BufferC(43).Type = 0
+    BufferC(43).XYZ(462.5457,462.9028,873.9174,-132.726,90,-180)
+    BufferC(43).ZWorld = False
+    BufferC(43).ZClearance = 1E+32
+    BufferC(43).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(44) = New Location 
+    BufferC(44).Type = 0
+    BufferC(44).XYZ(549.0464,375.926,873.9117,-131.5017,90,-180)
+    BufferC(44).ZWorld = False
+    BufferC(44).ZClearance = 1E+32
+    BufferC(44).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(45) = New Location 
+    BufferC(45).Type = 0
+    BufferC(45).XYZ(629.722,296.5851,873.8834,-132.343,90,-180)
+    BufferC(45).ZWorld = False
+    BufferC(45).ZClearance = 1E+32
+    BufferC(45).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(46) = New Location 
+    BufferC(46).Type = 0
+    BufferC(46).XYZ(295.2177,629.4764,808.5433,-132.8337,90,-180)
+    BufferC(46).ZWorld = False
+    BufferC(46).ZClearance = 1E+32
+    BufferC(46).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(47) = New Location 
+    BufferC(47).Type = 0
+    BufferC(47).XYZ(378.8254,544.8019,808.5278,-132.5975,90,-180)
+    BufferC(47).ZWorld = False
+    BufferC(47).ZClearance = 1E+32
+    BufferC(47).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(48) = New Location 
+    BufferC(48).Type = 0
+    BufferC(48).XYZ(465.0343,459.765,808.5255,-131.8864,90,-180)
+    BufferC(48).ZWorld = False
+    BufferC(48).ZClearance = 1E+32
+    BufferC(48).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(49) = New Location 
+    BufferC(49).Type = 0
+    BufferC(49).XYZ(546.5416,379.4023,807.9587,-132.4001,90,-180)
+    BufferC(49).ZWorld = False
+    BufferC(49).ZClearance = 1E+32
+    BufferC(49).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(50) = New Location 
+    BufferC(50).Type = 0
+    BufferC(50).XYZ(628.5694,296.6209,807.959,-132.5025,90,-180)
+    BufferC(50).ZWorld = False
+    BufferC(50).ZClearance = 1E+32
+    BufferC(50).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(51) = New Location 
+    BufferC(51).Type = 0
+    BufferC(51).XYZ(296.0168,631.2109,743.0648,-132.972,90,-180)
+    BufferC(51).ZWorld = False
+    BufferC(51).ZClearance = 1E+32
+    BufferC(51).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(52) = New Location 
+    BufferC(52).Type = 0
+    BufferC(52).XYZ(382.9567,542.9423,743.0645,-131.6383,90,-180)
+    BufferC(52).ZWorld = False
+    BufferC(52).ZClearance = 1E+32
+    BufferC(52).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(53) = New Location 
+    BufferC(53).Type = 0
+    BufferC(53).XYZ(463.4329,461.7152,743.0637,-132.1461,90,-180)
+    BufferC(53).ZWorld = False
+    BufferC(53).ZClearance = 1E+32
+    BufferC(53).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(54) = New Location 
+    BufferC(54).Type = 0
+    BufferC(54).XYZ(543.6819,381.6723,743.0639,-133.0251,90,-180)
+    BufferC(54).ZWorld = False
+    BufferC(54).ZClearance = 1E+32
+    BufferC(54).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(55) = New Location 
+    BufferC(55).Type = 0
+    BufferC(55).XYZ(626.5114,298.8121,743.0639,-132.9596,90,-180)
+    BufferC(55).ZWorld = False
+    BufferC(55).ZClearance = 1E+32
+    BufferC(55).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(56) = New Location 
+    BufferC(56).Type = 0
+    BufferC(56).XYZ(294.2924,628.2874,674.4106,-132.6514,90,-180)
+    BufferC(56).ZWorld = False
+    BufferC(56).ZClearance = 1E+32
+    BufferC(56).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(57) = New Location 
+    BufferC(57).Type = 0
+    BufferC(57).XYZ(377.2557,548.1897,674.6235,-133.1846,90,-180)
+    BufferC(57).ZWorld = False
+    BufferC(57).ZClearance = 1E+32
+    BufferC(57).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(58) = New Location 
+    BufferC(58).Type = 0
+    BufferC(58).XYZ(464.057,460.3793,674.6072,-131.8625,90,-180)
+    BufferC(58).ZWorld = False
+    BufferC(58).ZClearance = 1E+32
+    BufferC(58).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(59) = New Location 
+    BufferC(59).Type = 0
+    BufferC(59).XYZ(548.1099,377.2877,674.6,-131.6446,90,-180)
+    BufferC(59).ZWorld = False
+    BufferC(59).ZClearance = 1E+32
+    BufferC(59).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(60) = New Location 
+    BufferC(60).Type = 0
+    BufferC(60).XYZ(631.0189,295.3625,674.5917,-131.9046,90,-180)
+    BufferC(60).ZWorld = False
+    BufferC(60).ZClearance = 1E+32
+    BufferC(60).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(61) = New Location 
+    BufferC(61).Type = 0
+    BufferC(61).XYZ(296.7525,629.4493,609.7309,-132.4566,90,-180)
+    BufferC(61).ZWorld = False
+    BufferC(61).ZClearance = 1E+32
+    BufferC(61).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(62) = New Location 
+    BufferC(62).Type = 0
+    BufferC(62).XYZ(372.0779,552.2728,609.7279,-134.3749,90,-180)
+    BufferC(62).ZWorld = False
+    BufferC(62).ZClearance = 1E+32
+    BufferC(62).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(63) = New Location 
+    BufferC(63).Type = 0
+    BufferC(63).XYZ(465.2427,459.0006,609.7267,-131.4449,90,-180)
+    BufferC(63).ZWorld = False
+    BufferC(63).ZClearance = 1E+32
+    BufferC(63).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(64) = New Location 
+    BufferC(64).Type = 0
+    BufferC(64).XYZ(543.8219,381.0029,609.7223,-132.749,90,-180)
+    BufferC(64).ZWorld = False
+    BufferC(64).ZClearance = 1E+32
+    BufferC(64).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(65) = New Location 
+    BufferC(65).Type = 0
+    BufferC(65).XYZ(629.4226,295.4022,608.755,-132.0206,90,-180)
+    BufferC(65).ZWorld = False
+    BufferC(65).ZClearance = 1E+32
+    BufferC(65).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(66) = New Location 
+    BufferC(66).Type = 0
+    BufferC(66).XYZ(297.6885,627.3376,542.0378,-131.867,90,-180)
+    BufferC(66).ZWorld = False
+    BufferC(66).ZClearance = 1E+32
+    BufferC(66).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(67) = New Location 
+    BufferC(67).Type = 0
+    BufferC(67).XYZ(382.0485,541.5257,542.0131,-131.276,90,-180)
+    BufferC(67).ZWorld = False
+    BufferC(67).ZClearance = 1E+32
+    BufferC(67).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(68) = New Location 
+    BufferC(68).Type = 0
+    BufferC(68).XYZ(457.8079,467.3272,541.9902,-133.746,90,-180)
+    BufferC(68).ZWorld = False
+    BufferC(68).ZClearance = 1E+32
+    BufferC(68).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(69) = New Location 
+    BufferC(69).Type = 0
+    BufferC(69).XYZ(546.5099,378.3809,541.9866,-131.98,90,-180)
+    BufferC(69).ZWorld = False
+    BufferC(69).ZClearance = 1E+32
+    BufferC(69).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(70) = New Location 
+    BufferC(70).Type = 0
+    BufferC(70).XYZ(625.062,299.5306,541.9741,-133.1963,90,-180)
+    BufferC(70).ZWorld = False
+    BufferC(70).ZClearance = 1E+32
+    BufferC(70).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(71) = New Location 
+    BufferC(71).Type = 0
+    BufferC(71).XYZ(298.7654,625.5806,476.6173,-131.4579,90,-180)
+    BufferC(71).ZWorld = False
+    BufferC(71).ZClearance = 1E+32
+    BufferC(71).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(72) = New Location 
+    BufferC(72).Type = 0
+    BufferC(72).XYZ(386.2971,540.0629,476.6167,-130.3361,90,-180)
+    BufferC(72).ZWorld = False
+    BufferC(72).ZClearance = 1E+32
+    BufferC(72).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(73) = New Location 
+    BufferC(73).Type = 0
+    BufferC(73).XYZ(465.507,459.7696,476.6167,-131.3343,90,-180)
+    BufferC(73).ZWorld = False
+    BufferC(73).ZClearance = 1E+32
+    BufferC(73).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(74) = New Location 
+    BufferC(74).Type = 0
+    BufferC(74).XYZ(542.6328,381.9646,476.6164,-132.9526,90,-180)
+    BufferC(74).ZWorld = False
+    BufferC(74).ZClearance = 1E+32
+    BufferC(74).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(75) = New Location 
+    BufferC(75).Type = 0
+    BufferC(75).XYZ(623.124,300.6682,476.5519,-133.5658,90,-180)
+    BufferC(75).ZWorld = False
+    BufferC(75).ZClearance = 1E+32
+    BufferC(75).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(76) = New Location 
+    BufferC(76).Type = 0
+    BufferC(76).XYZ(295.4609,630.0634,409.6655,-132.4901,90,-180)
+    BufferC(76).ZWorld = False
+    BufferC(76).ZClearance = 1E+32
+    BufferC(76).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(77) = New Location 
+    BufferC(77).Type = 0
+    BufferC(77).XYZ(374.4879,548.4017,409.6643,-133.3511,90,-180)
+    BufferC(77).ZWorld = False
+    BufferC(77).ZClearance = 1E+32
+    BufferC(77).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(78) = New Location 
+    BufferC(78).Type = 0
+    BufferC(78).XYZ(455.748,469.4285,409.664,-134.1278,90,-180)
+    BufferC(78).ZWorld = False
+    BufferC(78).ZClearance = 1E+32
+    BufferC(78).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(79) = New Location 
+    BufferC(79).Type = 0
+    BufferC(79).XYZ(538.2028,384.2865,409.6622,-133.9133,90,-180)
+    BufferC(79).ZWorld = False
+    BufferC(79).ZClearance = 1E+32
+    BufferC(79).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(80) = New Location 
+    BufferC(80).Type = 0
+    BufferC(80).XYZ(617.9714,306.0206,409.6604,-135.1402,90,-180)
+    BufferC(80).ZWorld = False
+    BufferC(80).ZClearance = 1E+32
+    BufferC(80).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(81) = New Location 
+    BufferC(81).Type = 0
+    BufferC(81).XYZ(289.7088,637.7761,342.5459,-134.4485,90,-180)
+    BufferC(81).ZWorld = False
+    BufferC(81).ZClearance = 1E+32
+    BufferC(81).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(82) = New Location 
+    BufferC(82).Type = 0
+    BufferC(82).XYZ(375.6352,548.3095,342.201,-133.0644,90,-180)
+    BufferC(82).ZWorld = False
+    BufferC(82).ZClearance = 1E+32
+    BufferC(82).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(83) = New Location 
+    BufferC(83).Type = 0
+    BufferC(83).XYZ(460.0801,462.5863,342.1927,-132.5097,90,-180)
+    BufferC(83).ZWorld = False
+    BufferC(83).ZClearance = 1E+32
+    BufferC(83).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(84) = New Location 
+    BufferC(84).Type = 0
+    BufferC(84).XYZ(541.8865,383.2442,342.1778,-133.1795,90,-180)
+    BufferC(84).ZWorld = False
+    BufferC(84).ZClearance = 1E+32
+    BufferC(84).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(85) = New Location 
+    BufferC(85).Type = 0
+    BufferC(85).XYZ(624.7529,298.5986,342.1008,-133.0635,90,-180)
+    BufferC(85).ZWorld = False
+    BufferC(85).ZClearance = 1E+32
+    BufferC(85).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(86) = New Location 
+    BufferC(86).Type = 0
+    BufferC(86).XYZ(294.1027,628.4241,277.4597,-132.3985,90,-180)
+    BufferC(86).ZWorld = False
+    BufferC(86).ZClearance = 1E+32
+    BufferC(86).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(87) = New Location 
+    BufferC(87).Type = 0
+    BufferC(87).XYZ(376.8569,547.3518,277.4597,-132.6876,90,-180)
+    BufferC(87).ZWorld = False
+    BufferC(87).ZClearance = 1E+32
+    BufferC(87).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(88) = New Location 
+    BufferC(88).Type = 0
+    BufferC(88).XYZ(458.0495,465.4338,277.46,-133.1527,90,-180)
+    BufferC(88).ZWorld = False
+    BufferC(88).ZClearance = 1E+32
+    BufferC(88).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(89) = New Location 
+    BufferC(89).Type = 0
+    BufferC(89).XYZ(539.9708,385.8079,277.46,-133.8358,90,-180)
+    BufferC(89).ZWorld = False
+    BufferC(89).ZClearance = 1E+32
+    BufferC(89).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(90) = New Location 
+    BufferC(90).Type = 0
+    BufferC(90).XYZ(627.6619,296.9725,277.46,-132.2596,90,-180)
+    BufferC(90).ZWorld = False
+    BufferC(90).ZClearance = 1E+32
+    BufferC(90).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(91) = New Location 
+    BufferC(91).Type = 0
+    BufferC(91).XYZ(295.5089,627.4224,209.6551,-131.8846,90,-180)
+    BufferC(91).ZWorld = False
+    BufferC(91).ZClearance = 1E+32
+    BufferC(91).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(92) = New Location 
+    BufferC(92).Type = 0
+    BufferC(92).XYZ(378.5112,546.9084,210.1112,-132.396,90,-180)
+    BufferC(92).ZWorld = False
+    BufferC(92).ZClearance = 1E+32
+    BufferC(92).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(93) = New Location 
+    BufferC(93).Type = 0
+    BufferC(93).XYZ(459.3214,465.294,210.1056,-132.9723,90,-180)
+    BufferC(93).ZWorld = False
+    BufferC(93).ZClearance = 1E+32
+    BufferC(93).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(94) = New Location 
+    BufferC(94).Type = 0
+    BufferC(94).XYZ(543.4626,382.9224,210.0339,-132.8363,90,-180)
+    BufferC(94).ZWorld = False
+    BufferC(94).ZClearance = 1E+32
+    BufferC(94).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(95) = New Location 
+    BufferC(95).Type = 0
+    BufferC(95).XYZ(626.3774,298.1671,209.8492,-132.4787,90,-180)
+    BufferC(95).ZWorld = False
+    BufferC(95).ZClearance = 1E+32
+    BufferC(95).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(96) = New Location 
+    BufferC(96).Type = 0
+    BufferC(96).XYZ(294.6238,630.3895,142.5112,-132.6916,90,-180)
+    BufferC(96).ZWorld = False
+    BufferC(96).ZClearance = 1E+32
+    BufferC(96).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(97) = New Location 
+    BufferC(97).Type = 0
+    BufferC(97).XYZ(374.9714,549.5808,142.5272,-133.3285,90,-180)
+    BufferC(97).ZWorld = False
+    BufferC(97).ZClearance = 1E+32
+    BufferC(97).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(98) = New Location 
+    BufferC(98).Type = 0
+    BufferC(98).XYZ(457.2909,466.7327,142.5308,-133.4461,90,-180)
+    BufferC(98).ZWorld = False
+    BufferC(98).ZClearance = 1E+32
+    BufferC(98).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(99) = New Location 
+    BufferC(99).Type = 0
+    BufferC(99).XYZ(544.5358,378.8322,142.5314,-132.0997,90,-180)
+    BufferC(99).ZWorld = False
+    BufferC(99).ZClearance = 1E+32
+    BufferC(99).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferC,100
+    BufferC(100) = New Location 
+    BufferC(100).Type = 0
+    BufferC(100).XYZ(626.0355,295.984,142.5326,-132.1849,90,-180)
+    BufferC(100).ZWorld = False
+    BufferC(100).ZClearance = 1E+32
+    BufferC(100).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(0) = New Location 
+    BufferD(0).Text = "DO NOT USE!"
+    BufferD(0).Type = 0
+    BufferD(0).XYZ(0,0,0,0,0,0)
+    BufferD(0).ZWorld = False
+    BufferD(0).ZClearance = 1E+32
+    BufferD(0).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(1) = New Location 
+    BufferD(1).Type = 0
+    BufferD(1).XYZ(654.3828,241.0541,1403.611,-178.3309,90,-180)
+    BufferD(1).ZWorld = False
+    BufferD(1).ZClearance = 1E+32
+    BufferD(1).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(2) = New Location 
+    BufferD(2).Type = 0
+    BufferD(2).XYZ(654.5579,126.3563,1404.487,-178.8437,90,-180)
+    BufferD(2).ZWorld = False
+    BufferD(2).ZClearance = 1E+32
+    BufferD(2).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(3) = New Location 
+    BufferD(3).Type = 0
+    BufferD(3).XYZ(654.0241,2.356748,1404.437,-177.3913,90,-180)
+    BufferD(3).ZWorld = False
+    BufferD(3).ZClearance = 1E+32
+    BufferD(3).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(4) = New Location 
+    BufferD(4).Type = 0
+    BufferD(4).XYZ(652.9979,-113.2604,1404.354,-177.7818,90,-180)
+    BufferD(4).ZWorld = False
+    BufferD(4).ZClearance = 1E+32
+    BufferD(4).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(5) = New Location 
+    BufferD(5).Type = 0
+    BufferD(5).XYZ(652.7695,-230.9789,1404.297,-177.906,90,-180)
+    BufferD(5).ZWorld = False
+    BufferD(5).ZClearance = 1E+32
+    BufferD(5).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(6) = New Location 
+    BufferD(6).Type = 0
+    BufferD(6).XYZ(652.6899,233.5532,1339.634,-176.6668,90,-180)
+    BufferD(6).ZWorld = False
+    BufferD(6).ZClearance = 1E+32
+    BufferD(6).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(7) = New Location 
+    BufferD(7).Type = 0
+    BufferD(7).XYZ(653.2241,119.0412,1339.573,-177.2057,90,-180)
+    BufferD(7).ZWorld = False
+    BufferD(7).ZClearance = 1E+32
+    BufferD(7).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(8) = New Location 
+    BufferD(8).Type = 0
+    BufferD(8).XYZ(653.1591,5.316983,1338.29,-177.9455,90,-180)
+    BufferD(8).ZWorld = False
+    BufferD(8).ZClearance = 1E+32
+    BufferD(8).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(9) = New Location 
+    BufferD(9).Type = 0
+    BufferD(9).XYZ(653.3863,-114.6308,1338.282,-177.5334,90,-180)
+    BufferD(9).ZWorld = False
+    BufferD(9).ZClearance = 1E+32
+    BufferD(9).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(10) = New Location 
+    BufferD(10).Type = 0
+    BufferD(10).XYZ(654.1119,-228.8694,1338.273,-178.1403,90,-180)
+    BufferD(10).ZWorld = False
+    BufferD(10).ZClearance = 1E+32
+    BufferD(10).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(11) = New Location 
+    BufferD(11).Type = 0
+    BufferD(11).XYZ(653.0249,241.6791,1272.301,-178.5183,90,-180)
+    BufferD(11).ZWorld = False
+    BufferD(11).ZClearance = 1E+32
+    BufferD(11).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(12) = New Location 
+    BufferD(12).Type = 0
+    BufferD(12).XYZ(654.0156,124.4853,1272.296,-178.4401,90,-180)
+    BufferD(12).ZWorld = False
+    BufferD(12).ZClearance = 1E+32
+    BufferD(12).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(13) = New Location 
+    BufferD(13).Type = 0
+    BufferD(13).XYZ(653.7323,9.29693,1272.291,-178.8815,90,-180)
+    BufferD(13).ZWorld = False
+    BufferD(13).ZClearance = 1E+32
+    BufferD(13).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(14) = New Location 
+    BufferD(14).Type = 0
+    BufferD(14).XYZ(652.8994,-115.188,1272.28,-177.2576,90,-180)
+    BufferD(14).ZWorld = False
+    BufferD(14).ZClearance = 1E+32
+    BufferD(14).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(15) = New Location 
+    BufferD(15).Type = 0
+    BufferD(15).XYZ(653.3181,-230.4947,1272.271,-177.7761,90,-180)
+    BufferD(15).ZWorld = False
+    BufferD(15).ZClearance = 1E+32
+    BufferD(15).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(16) = New Location 
+    BufferD(16).Type = 0
+    BufferD(16).XYZ(653.826,238.4986,1205.888,-177.7657,90,-180)
+    BufferD(16).ZWorld = False
+    BufferD(16).ZClearance = 1E+32
+    BufferD(16).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(17) = New Location 
+    BufferD(17).Type = 0
+    BufferD(17).XYZ(651.9596,117.4924,1205.878,-176.8564,90,-180)
+    BufferD(17).ZWorld = False
+    BufferD(17).ZClearance = 1E+32
+    BufferD(17).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(18) = New Location 
+    BufferD(18).Type = 0
+    BufferD(18).XYZ(652.1568,8.318403,1205.875,-178.6639,90,-180)
+    BufferD(18).ZWorld = False
+    BufferD(18).ZClearance = 1E+32
+    BufferD(18).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(19) = New Location 
+    BufferD(19).Type = 0
+    BufferD(19).XYZ(653.1697,-110.3393,1205.872,-178.2696,90,-180)
+    BufferD(19).ZWorld = False
+    BufferD(19).ZClearance = 1E+32
+    BufferD(19).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(20) = New Location 
+    BufferD(20).Type = 0
+    BufferD(20).XYZ(654.2125,-231.7957,1205.867,-177.3941,90,-180)
+    BufferD(20).ZWorld = False
+    BufferD(20).ZClearance = 1E+32
+    BufferD(20).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(21) = New Location 
+    BufferD(21).Type = 0
+    BufferD(21).XYZ(651.4538,239.9382,1138.555,-177.9997,90,-180)
+    BufferD(21).ZWorld = False
+    BufferD(21).ZClearance = 1E+32
+    BufferD(21).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(22) = New Location 
+    BufferD(22).Type = 0
+    BufferD(22).XYZ(654.1108,125.0768,1138.511,-178.5027,90,-180)
+    BufferD(22).ZWorld = False
+    BufferD(22).ZClearance = 1E+32
+    BufferD(22).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(23) = New Location 
+    BufferD(23).Type = 0
+    BufferD(23).XYZ(653.0026,6.812114,1138.499,-178.2523,90,-180)
+    BufferD(23).ZWorld = False
+    BufferD(23).ZClearance = 1E+32
+    BufferD(23).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(24) = New Location 
+    BufferD(24).Type = 0
+    BufferD(24).XYZ(652.8514,-111.2324,1138.495,-178.0328,90,-180)
+    BufferD(24).ZWorld = False
+    BufferD(24).ZClearance = 1E+32
+    BufferD(24).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(25) = New Location 
+    BufferD(25).Type = 0
+    BufferD(25).XYZ(653.5671,-227.7442,1138.49,-178.1955,90,-180)
+    BufferD(25).ZWorld = False
+    BufferD(25).ZClearance = 1E+32
+    BufferD(25).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(26) = New Location 
+    BufferD(26).Type = 0
+    BufferD(26).XYZ(653.4569,235.8216,1070.9,-177.0516,90,-180)
+    BufferD(26).ZWorld = False
+    BufferD(26).ZClearance = 1E+32
+    BufferD(26).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(27) = New Location 
+    BufferD(27).Type = 0
+    BufferD(27).XYZ(652.3252,125.0304,1071.222,-178.5459,90,-180)
+    BufferD(27).ZWorld = False
+    BufferD(27).ZClearance = 1E+32
+    BufferD(27).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(28) = New Location 
+    BufferD(28).Type = 0
+    BufferD(28).XYZ(651.7703,6.568624,1071.202,-178.1875,90,-180)
+    BufferD(28).ZWorld = False
+    BufferD(28).ZClearance = 1E+32
+    BufferD(28).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(29) = New Location 
+    BufferD(29).Type = 0
+    BufferD(29).XYZ(652.9829,-112.1464,1071.197,-177.8568,90,-180)
+    BufferD(29).ZWorld = False
+    BufferD(29).ZClearance = 1E+32
+    BufferD(29).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(30) = New Location 
+    BufferD(30).Type = 0
+    BufferD(30).XYZ(652.3827,-232.1184,1071.177,-177.3212,90,-180)
+    BufferD(30).ZWorld = False
+    BufferD(30).ZClearance = 1E+32
+    BufferD(30).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(31) = New Location 
+    BufferD(31).Type = 0
+    BufferD(31).XYZ(653.6179,235.4476,1006.813,-177.1235,90,-180)
+    BufferD(31).ZWorld = False
+    BufferD(31).ZClearance = 1E+32
+    BufferD(31).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(32) = New Location 
+    BufferD(32).Type = 0
+    BufferD(32).XYZ(654.077,124.4549,1006.666,-178.3976,90,-180)
+    BufferD(32).ZWorld = False
+    BufferD(32).ZClearance = 1E+32
+    BufferD(32).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(33) = New Location 
+    BufferD(33).Type = 0
+    BufferD(33).XYZ(652.266,8.285009,1006.656,-178.6434,90,-180)
+    BufferD(33).ZWorld = False
+    BufferD(33).ZClearance = 1E+32
+    BufferD(33).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(34) = New Location 
+    BufferD(34).Type = 0
+    BufferD(34).XYZ(653.7661,-116.6134,1006.635,-176.914,90,-180)
+    BufferD(34).ZWorld = False
+    BufferD(34).ZClearance = 1E+32
+    BufferD(34).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(35) = New Location 
+    BufferD(35).Type = 0
+    BufferD(35).XYZ(652.8237,-234.0281,1006.626,-176.9159,90,-180)
+    BufferD(35).ZWorld = False
+    BufferD(35).ZClearance = 1E+32
+    BufferD(35).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(36) = New Location 
+    BufferD(36).Type = 0
+    BufferD(36).XYZ(651.606,235.0537,938.2875,-176.7834,90,-180)
+    BufferD(36).ZWorld = False
+    BufferD(36).ZClearance = 1E+32
+    BufferD(36).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(37) = New Location 
+    BufferD(37).Type = 0
+    BufferD(37).XYZ(651.7391,127.2269,938.5424,-178.9524,90,-180)
+    BufferD(37).ZWorld = False
+    BufferD(37).ZClearance = 1E+32
+    BufferD(37).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(38) = New Location 
+    BufferD(38).Type = 0
+    BufferD(38).XYZ(654.2769,1.288476,939.7466,-176.9392,90,-180)
+    BufferD(38).ZWorld = False
+    BufferD(38).ZClearance = 1E+32
+    BufferD(38).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(39) = New Location 
+    BufferD(39).Type = 0
+    BufferD(39).XYZ(654.3146,-113.6935,939.7463,-177.5448,90,-180)
+    BufferD(39).ZWorld = False
+    BufferD(39).ZClearance = 1E+32
+    BufferD(39).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(40) = New Location 
+    BufferD(40).Type = 0
+    BufferD(40).XYZ(653.2316,-233.0408,939.746,-177.1377,90,-180)
+    BufferD(40).ZWorld = False
+    BufferD(40).ZClearance = 1E+32
+    BufferD(40).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(41) = New Location 
+    BufferD(41).Type = 0
+    BufferD(41).XYZ(654.9633,239.8831,873.3262,-177.8896,90,-180)
+    BufferD(41).ZWorld = False
+    BufferD(41).ZClearance = 1E+32
+    BufferD(41).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(42) = New Location 
+    BufferD(42).Type = 0
+    BufferD(42).XYZ(653.3948,121.308,873.3223,-177.5908,90,-180)
+    BufferD(42).ZWorld = False
+    BufferD(42).ZClearance = 1E+32
+    BufferD(42).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(43) = New Location 
+    BufferD(43).Type = 0
+    BufferD(43).XYZ(652.5279,5.895249,873.3161,-178.0395,90,-180)
+    BufferD(43).ZWorld = False
+    BufferD(43).ZClearance = 1E+32
+    BufferD(43).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(44) = New Location 
+    BufferD(44).Type = 0
+    BufferD(44).XYZ(653.2508,-114.8766,873.3134,-177.2489,90,-180)
+    BufferD(44).ZWorld = False
+    BufferD(44).ZClearance = 1E+32
+    BufferD(44).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(45) = New Location 
+    BufferD(45).Type = 0
+    BufferD(45).XYZ(652.4847,-229.9766,873.2941,-177.7101,90,-180)
+    BufferD(45).ZWorld = False
+    BufferD(45).ZClearance = 1E+32
+    BufferD(45).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(46) = New Location 
+    BufferD(46).Type = 0
+    BufferD(46).XYZ(654.0051,241.5613,807.7716,-178.1538,90,-180)
+    BufferD(46).ZWorld = False
+    BufferD(46).ZClearance = 1E+32
+    BufferD(46).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(47) = New Location 
+    BufferD(47).Type = 0
+    BufferD(47).XYZ(653.7297,123.3192,807.7716,-177.9722,90,-180)
+    BufferD(47).ZWorld = False
+    BufferD(47).ZClearance = 1E+32
+    BufferD(47).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(48) = New Location 
+    BufferD(48).Type = 0
+    BufferD(48).XYZ(653.9497,5.880976,807.7716,-178.0251,90,-180)
+    BufferD(48).ZWorld = False
+    BufferD(48).ZClearance = 1E+32
+    BufferD(48).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(49) = New Location 
+    BufferD(49).Type = 0
+    BufferD(49).XYZ(653.7283,-111.2791,807.7687,-177.9554,90,-180)
+    BufferD(49).ZWorld = False
+    BufferD(49).ZClearance = 1E+32
+    BufferD(49).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(50) = New Location 
+    BufferD(50).Type = 0
+    BufferD(50).XYZ(653.7032,-233.4626,807.7479,-177.0577,90,-180)
+    BufferD(50).ZWorld = False
+    BufferD(50).ZClearance = 1E+32
+    BufferD(50).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(51) = New Location 
+    BufferD(51).Type = 0
+    BufferD(51).XYZ(656.5483,239.6565,742.2486,-177.7973,90,-180)
+    BufferD(51).ZWorld = False
+    BufferD(51).ZClearance = 1E+32
+    BufferD(51).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(52) = New Location 
+    BufferD(52).Type = 0
+    BufferD(52).XYZ(653.7823,119.825,741.5905,-177.2393,90,-180)
+    BufferD(52).ZWorld = False
+    BufferD(52).ZClearance = 1E+32
+    BufferD(52).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(53) = New Location 
+    BufferD(53).Type = 0
+    BufferD(53).XYZ(653.0521,2.56485,741.5905,-177.2026,90,-180)
+    BufferD(53).ZWorld = False
+    BufferD(53).ZClearance = 1E+32
+    BufferD(53).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(54) = New Location 
+    BufferD(54).Type = 0
+    BufferD(54).XYZ(653.0728,-111.9789,741.59,-177.8363,90,-180)
+    BufferD(54).ZWorld = False
+    BufferD(54).ZClearance = 1E+32
+    BufferD(54).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(55) = New Location 
+    BufferD(55).Type = 0
+    BufferD(55).XYZ(654.237,-232.5919,741.5903,-177.1108,90,-180)
+    BufferD(55).ZWorld = False
+    BufferD(55).ZClearance = 1E+32
+    BufferD(55).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(56) = New Location 
+    BufferD(56).Type = 0
+    BufferD(56).XYZ(652.3745,234.3451,675.6682,-176.5626,90,-180)
+    BufferD(56).ZWorld = False
+    BufferD(56).ZClearance = 1E+32
+    BufferD(56).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(57) = New Location 
+    BufferD(57).Type = 0
+    BufferD(57).XYZ(653.5107,123.5702,675.6658,-178.0399,90,-180)
+    BufferD(57).ZWorld = False
+    BufferD(57).ZClearance = 1E+32
+    BufferD(57).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(58) = New Location 
+    BufferD(58).Type = 0
+    BufferD(58).XYZ(652.4903,8.622485,675.6628,-178.4309,90,-180)
+    BufferD(58).ZWorld = False
+    BufferD(58).ZClearance = 1E+32
+    BufferD(58).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(59) = New Location 
+    BufferD(59).Type = 0
+    BufferD(59).XYZ(653.9913,-111.5992,675.6604,-177.9872,90,-180)
+    BufferD(59).ZWorld = False
+    BufferD(59).ZClearance = 1E+32
+    BufferD(59).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(60) = New Location 
+    BufferD(60).Type = 0
+    BufferD(60).XYZ(654.1154,-227.1292,674.862,-178.2999,90,-180)
+    BufferD(60).ZWorld = False
+    BufferD(60).ZClearance = 1E+32
+    BufferD(60).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(61) = New Location 
+    BufferD(61).Type = 0
+    BufferD(61).XYZ(654.0622,241.3226,609.1246,-178.1186,90,-180)
+    BufferD(61).ZWorld = False
+    BufferD(61).ZClearance = 1E+32
+    BufferD(61).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(62) = New Location 
+    BufferD(62).Type = 0
+    BufferD(62).XYZ(654.9631,124.4418,609.1225,-178.1268,90,-180)
+    BufferD(62).ZWorld = False
+    BufferD(62).ZClearance = 1E+32
+    BufferD(62).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(63) = New Location 
+    BufferD(63).Type = 0
+    BufferD(63).XYZ(653.1978,6.636428,608.7089,-177.9691,90,-180)
+    BufferD(63).ZWorld = False
+    BufferD(63).ZClearance = 1E+32
+    BufferD(63).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(64) = New Location 
+    BufferD(64).Type = 0
+    BufferD(64).XYZ(654.0294,-109.6916,608.7056,-178.1765,90,-180)
+    BufferD(64).ZWorld = False
+    BufferD(64).ZClearance = 1E+32
+    BufferD(64).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(65) = New Location 
+    BufferD(65).Type = 0
+    BufferD(65).XYZ(653.3331,-227.8746,608.7042,-178.1118,90,-180)
+    BufferD(65).ZWorld = False
+    BufferD(65).ZClearance = 1E+32
+    BufferD(65).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(66) = New Location 
+    BufferD(66).Type = 0
+    BufferD(66).XYZ(653.2341,242.0059,543.3488,-178.224,90,-180)
+    BufferD(66).ZWorld = False
+    BufferD(66).ZClearance = 1E+32
+    BufferD(66).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(67) = New Location 
+    BufferD(67).Type = 0
+    BufferD(67).XYZ(652.6443,121.4091,542.1668,-177.5964,90,-180)
+    BufferD(67).ZWorld = False
+    BufferD(67).ZClearance = 1E+32
+    BufferD(67).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(68) = New Location 
+    BufferD(68).Type = 0
+    BufferD(68).XYZ(652.8762,6.252191,542.0958,-177.9996,90,-180)
+    BufferD(68).ZWorld = False
+    BufferD(68).ZClearance = 1E+32
+    BufferD(68).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(69) = New Location 
+    BufferD(69).Type = 0
+    BufferD(69).XYZ(654.2471,-110.9879,541.9646,-177.9902,90,-180)
+    BufferD(69).ZWorld = False
+    BufferD(69).ZClearance = 1E+32
+    BufferD(69).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(70) = New Location 
+    BufferD(70).Type = 0
+    BufferD(70).XYZ(652.3104,-230.3568,541.9581,-177.6101,90,-180)
+    BufferD(70).ZWorld = False
+    BufferD(70).ZClearance = 1E+32
+    BufferD(70).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(71) = New Location 
+    BufferD(71).Type = 0
+    BufferD(71).XYZ(654.2939,236.8262,477.1558,-177.0887,90,-180)
+    BufferD(71).ZWorld = False
+    BufferD(71).ZClearance = 1E+32
+    BufferD(71).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(72) = New Location 
+    BufferD(72).Type = 0
+    BufferD(72).XYZ(653.3075,116.8129,477.1531,-176.6343,90,-180)
+    BufferD(72).ZWorld = False
+    BufferD(72).ZClearance = 1E+32
+    BufferD(72).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(73) = New Location 
+    BufferD(73).Type = 0
+    BufferD(73).XYZ(654.3637,0.7970662,476.8094,-176.7196,90,-180)
+    BufferD(73).ZWorld = False
+    BufferD(73).ZClearance = 1E+32
+    BufferD(73).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(74) = New Location 
+    BufferD(74).Type = 0
+    BufferD(74).XYZ(653.7518,-113.1198,476.8094,-177.6603,90,-180)
+    BufferD(74).ZWorld = False
+    BufferD(74).ZClearance = 1E+32
+    BufferD(74).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(75) = New Location 
+    BufferD(75).Type = 0
+    BufferD(75).XYZ(654.2087,-224.4688,475.4514,-178.8512,90,-180)
+    BufferD(75).ZWorld = False
+    BufferD(75).ZClearance = 1E+32
+    BufferD(75).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(76) = New Location 
+    BufferD(76).Type = 0
+    BufferD(76).XYZ(654.4684,238.5693,410.8418,-177.3746,90,-180)
+    BufferD(76).ZWorld = False
+    BufferD(76).ZClearance = 1E+32
+    BufferD(76).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(77) = New Location 
+    BufferD(77).Type = 0
+    BufferD(77).XYZ(653.6349,120.9892,410.8281,-177.2968,90,-180)
+    BufferD(77).ZWorld = False
+    BufferD(77).ZClearance = 1E+32
+    BufferD(77).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(78) = New Location 
+    BufferD(78).Type = 0
+    BufferD(78).XYZ(653.363,5.156743,410.8127,-177.7305,90,-180)
+    BufferD(78).ZWorld = False
+    BufferD(78).ZClearance = 1E+32
+    BufferD(78).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(79) = New Location 
+    BufferD(79).Type = 0
+    BufferD(79).XYZ(654.0002,-109.6269,410.8106,-178.3599,90,-180)
+    BufferD(79).ZWorld = False
+    BufferD(79).ZClearance = 1E+32
+    BufferD(79).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(80) = New Location 
+    BufferD(80).Type = 0
+    BufferD(80).XYZ(655.6533,-228.3768,410.8106,-177.9539,90,-180)
+    BufferD(80).ZWorld = False
+    BufferD(80).ZClearance = 1E+32
+    BufferD(80).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(81) = New Location 
+    BufferD(81).Type = 0
+    BufferD(81).XYZ(653.4982,236.6098,343.3476,-176.9323,90,-180)
+    BufferD(81).ZWorld = False
+    BufferD(81).ZClearance = 1E+32
+    BufferD(81).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(82) = New Location 
+    BufferD(82).Type = 0
+    BufferD(82).XYZ(652.7512,118.0012,343.3464,-176.7835,90,-180)
+    BufferD(82).ZWorld = False
+    BufferD(82).ZClearance = 1E+32
+    BufferD(82).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(83) = New Location 
+    BufferD(83).Type = 0
+    BufferD(83).XYZ(653.6437,3.267496,343.3449,-177.2753,90,-180)
+    BufferD(83).ZWorld = False
+    BufferD(83).ZClearance = 1E+32
+    BufferD(83).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(84) = New Location 
+    BufferD(84).Type = 0
+    BufferD(84).XYZ(654.0505,-111.7126,343.3419,-177.7409,90,-180)
+    BufferD(84).ZWorld = False
+    BufferD(84).ZClearance = 1E+32
+    BufferD(84).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(85) = New Location 
+    BufferD(85).Type = 0
+    BufferD(85).XYZ(654.2358,-228.2182,343.3419,-178.0414,90,-180)
+    BufferD(85).ZWorld = False
+    BufferD(85).ZClearance = 1E+32
+    BufferD(85).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(86) = New Location 
+    BufferD(86).Type = 0
+    BufferD(86).XYZ(651.7166,239.3615,276.1918,-177.4701,90,-180)
+    BufferD(86).ZWorld = False
+    BufferD(86).ZClearance = 1E+32
+    BufferD(86).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(87) = New Location 
+    BufferD(87).Type = 0
+    BufferD(87).XYZ(651.9055,122.1501,276.9905,-177.4843,90,-180)
+    BufferD(87).ZWorld = False
+    BufferD(87).ZClearance = 1E+32
+    BufferD(87).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(88) = New Location 
+    BufferD(88).Type = 0
+    BufferD(88).XYZ(653.8209,2.055308,276.9783,-176.9825,90,-180)
+    BufferD(88).ZWorld = False
+    BufferD(88).ZClearance = 1E+32
+    BufferD(88).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(89) = New Location 
+    BufferD(89).Type = 0
+    BufferD(89).XYZ(653.5429,-111.2888,276.9673,-177.7974,90,-180)
+    BufferD(89).ZWorld = False
+    BufferD(89).ZClearance = 1E+32
+    BufferD(89).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(90) = New Location 
+    BufferD(90).Type = 0
+    BufferD(90).XYZ(655.6982,-230.1354,276.559,-177.4727,90,-180)
+    BufferD(90).ZWorld = False
+    BufferD(90).ZClearance = 1E+32
+    BufferD(90).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(91) = New Location 
+    BufferD(91).Type = 0
+    BufferD(91).XYZ(652.3401,232.6606,207.8778,-175.9602,90,-180)
+    BufferD(91).ZWorld = False
+    BufferD(91).ZClearance = 1E+32
+    BufferD(91).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(92) = New Location 
+    BufferD(92).Type = 0
+    BufferD(92).XYZ(652.6723,120.979,209.0529,-177.3696,90,-180)
+    BufferD(92).ZWorld = False
+    BufferD(92).ZClearance = 1E+32
+    BufferD(92).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(93) = New Location 
+    BufferD(93).Type = 0
+    BufferD(93).XYZ(653.2582,3.795539,208.8356,-177.3041,90,-180)
+    BufferD(93).ZWorld = False
+    BufferD(93).ZClearance = 1E+32
+    BufferD(93).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(94) = New Location 
+    BufferD(94).Type = 0
+    BufferD(94).XYZ(652.8776,-111.0022,208.8073,-177.9399,90,-180)
+    BufferD(94).ZWorld = False
+    BufferD(94).ZClearance = 1E+32
+    BufferD(94).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(95) = New Location 
+    BufferD(95).Type = 0
+    BufferD(95).XYZ(654.538,-227.6478,207.1112,-178.249,90,-180)
+    BufferD(95).ZWorld = False
+    BufferD(95).ZClearance = 1E+32
+    BufferD(95).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(96) = New Location 
+    BufferD(96).Type = 0
+    BufferD(96).XYZ(653.0191,240.3468,140.95,-177.6652,90,-180)
+    BufferD(96).ZWorld = False
+    BufferD(96).ZClearance = 1E+32
+    BufferD(96).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(97) = New Location 
+    BufferD(97).Type = 0
+    BufferD(97).XYZ(652.2087,121.9448,140.7303,-177.6035,90,-180)
+    BufferD(97).ZWorld = False
+    BufferD(97).ZClearance = 1E+32
+    BufferD(97).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(98) = New Location 
+    BufferD(98).Type = 0
+    BufferD(98).XYZ(653.1085,-0.2430165,140.3976,-176.6042,90,-180)
+    BufferD(98).ZWorld = False
+    BufferD(98).ZClearance = 1E+32
+    BufferD(98).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(99) = New Location 
+    BufferD(99).Type = 0
+    BufferD(99).XYZ(654.2021,-116.659,140.391,-176.8439,90,-180)
+    BufferD(99).ZWorld = False
+    BufferD(99).ZClearance = 1E+32
+    BufferD(99).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferD,100
+    BufferD(100) = New Location 
+    BufferD(100).Type = 0
+    BufferD(100).XYZ(653.9357,-234.3788,140.3872,-176.7207,90,-180)
+    BufferD(100).ZWorld = False
+    BufferD(100).ZClearance = 1E+32
+    BufferD(100).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(0) = New Location 
+    BufferE(0).Text = "DO NOT USE"
+    BufferE(0).Type = 0
+    BufferE(0).XYZ(0,0,0,0,0,0)
+    BufferE(0).ZWorld = False
+    BufferE(0).ZClearance = 1E+32
+    BufferE(0).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(1) = New Location 
+    BufferE(1).Type = 0
+    BufferE(1).XYZ(633.8401,-289.6253,1407.004,136.5519,90,-180)
+    BufferE(1).ZWorld = False
+    BufferE(1).ZClearance = 1E+32
+    BufferE(1).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(2) = New Location 
+    BufferE(2).Type = 0
+    BufferE(2).XYZ(547.3071,-373.0529,1407.07,137.0434,90,-180)
+    BufferE(2).ZWorld = False
+    BufferE(2).ZClearance = 1E+32
+    BufferE(2).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(3) = New Location 
+    BufferE(3).Type = 0
+    BufferE(3).XYZ(461.4052,-455.5697,1407.032,137.505,90,-180)
+    BufferE(3).ZWorld = False
+    BufferE(3).ZClearance = 1E+32
+    BufferE(3).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(4) = New Location 
+    BufferE(4).Type = 0
+    BufferE(4).XYZ(382.1469,-535.4158,1406.986,136.3452,90,-180)
+    BufferE(4).ZWorld = False
+    BufferE(4).ZClearance = 1E+32
+    BufferE(4).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(5) = New Location 
+    BufferE(5).Type = 0
+    BufferE(5).XYZ(298.9986,-620.6398,1406.98,136.8249,90,-180)
+    BufferE(5).ZWorld = False
+    BufferE(5).ZClearance = 1E+32
+    BufferE(5).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(6) = New Location 
+    BufferE(6).Type = 0
+    BufferE(6).XYZ(632.7532,-290.4885,1342.328,136.7789,90,-180)
+    BufferE(6).ZWorld = False
+    BufferE(6).ZClearance = 1E+32
+    BufferE(6).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(7) = New Location 
+    BufferE(7).Type = 0
+    BufferE(7).XYZ(548.1828,-372.3782,1341.134,136.9328,90,-180)
+    BufferE(7).ZWorld = False
+    BufferE(7).ZClearance = 1E+32
+    BufferE(7).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(8) = New Location 
+    BufferE(8).Type = 0
+    BufferE(8).XYZ(462.8512,-454.9568,1341.098,137.1198,90,-180)
+    BufferE(8).ZWorld = False
+    BufferE(8).ZClearance = 1E+32
+    BufferE(8).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(9) = New Location 
+    BufferE(9).Type = 0
+    BufferE(9).XYZ(380.9508,-538.1207,1341.049,136.9732,90,-180)
+    BufferE(9).ZWorld = False
+    BufferE(9).ZClearance = 1E+32
+    BufferE(9).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(10) = New Location 
+    BufferE(10).Type = 0
+    BufferE(10).XYZ(296.3236,-621.853,1340.923,137.4643,90,-180)
+    BufferE(10).ZWorld = False
+    BufferE(10).ZClearance = 1E+32
+    BufferE(10).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(11) = New Location 
+    BufferE(11).Type = 0
+    BufferE(11).XYZ(624.839,-296.1505,1275.505,138.7895,90,-180)
+    BufferE(11).ZWorld = False
+    BufferE(11).ZClearance = 1E+32
+    BufferE(11).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(12) = New Location 
+    BufferE(12).Type = 0
+    BufferE(12).XYZ(545.191,-374.9461,1275.491,137.6484,90,-180)
+    BufferE(12).ZWorld = False
+    BufferE(12).ZClearance = 1E+32
+    BufferE(12).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(13) = New Location 
+    BufferE(13).Type = 0
+    BufferE(13).XYZ(464.1989,-454.5088,1274.286,136.8944,90,-180)
+    BufferE(13).ZWorld = False
+    BufferE(13).ZClearance = 1E+32
+    BufferE(13).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(14) = New Location 
+    BufferE(14).Type = 0
+    BufferE(14).XYZ(381.5161,-538.5261,1274.28,137.0684,90,-180)
+    BufferE(14).ZWorld = False
+    BufferE(14).ZClearance = 1E+32
+    BufferE(14).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(15) = New Location 
+    BufferE(15).Type = 0
+    BufferE(15).XYZ(294.9596,-622.7877,1274.255,137.6879,90,-180)
+    BufferE(15).ZWorld = False
+    BufferE(15).ZClearance = 1E+32
+    BufferE(15).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(16) = New Location 
+    BufferE(16).Type = 0
+    BufferE(16).XYZ(627.9968,-293.7857,1209.316,138.0771,90,-180)
+    BufferE(16).ZWorld = False
+    BufferE(16).ZClearance = 1E+32
+    BufferE(16).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(17) = New Location 
+    BufferE(17).Type = 0
+    BufferE(17).XYZ(548.751,-370.4772,1209.246,136.559,90,-180)
+    BufferE(17).ZWorld = False
+    BufferE(17).ZClearance = 1E+32
+    BufferE(17).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(18) = New Location 
+    BufferE(18).Type = 0
+    BufferE(18).XYZ(466.494,-453.8651,1209.242,136.606,90,-180)
+    BufferE(18).ZWorld = False
+    BufferE(18).ZClearance = 1E+32
+    BufferE(18).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(19) = New Location 
+    BufferE(19).Type = 0
+    BufferE(19).XYZ(380.1759,-537.7543,1208.448,137.2183,90,-180)
+    BufferE(19).ZWorld = False
+    BufferE(19).ZClearance = 1E+32
+    BufferE(19).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(20) = New Location 
+    BufferE(20).Type = 0
+    BufferE(20).XYZ(298.4219,-621.2023,1208.441,137.1791,90,-180)
+    BufferE(20).ZWorld = False
+    BufferE(20).ZClearance = 1E+32
+    BufferE(20).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(21) = New Location 
+    BufferE(21).Type = 0
+    BufferE(21).XYZ(627.7775,-292.5204,1142.065,137.9164,90,-180)
+    BufferE(21).ZWorld = False
+    BufferE(21).ZClearance = 1E+32
+    BufferE(21).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(22) = New Location 
+    BufferE(22).Type = 0
+    BufferE(22).XYZ(545.2438,-373.8658,1141.963,137.5979,90,-180)
+    BufferE(22).ZWorld = False
+    BufferE(22).ZClearance = 1E+32
+    BufferE(22).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(23) = New Location 
+    BufferE(23).Type = 0
+    BufferE(23).XYZ(462.6742,-456.0344,1141.927,137.4272,90,-180)
+    BufferE(23).ZWorld = False
+    BufferE(23).ZClearance = 1E+32
+    BufferE(23).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(24) = New Location 
+    BufferE(24).Type = 0
+    BufferE(24).XYZ(382.0055,-536.5864,1141.919,136.8407,90,-180)
+    BufferE(24).ZWorld = False
+    BufferE(24).ZClearance = 1E+32
+    BufferE(24).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(25) = New Location 
+    BufferE(25).Type = 0
+    BufferE(25).XYZ(297.3683,-621.1097,1141.753,137.2421,90,-180)
+    BufferE(25).ZWorld = False
+    BufferE(25).ZClearance = 1E+32
+    BufferE(25).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(26) = New Location 
+    BufferE(26).Type = 0
+    BufferE(26).XYZ(633.8406,-287.2405,1074.503,136.4334,90,-180)
+    BufferE(26).ZWorld = False
+    BufferE(26).ZClearance = 1E+32
+    BufferE(26).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(27) = New Location 
+    BufferE(27).Type = 0
+    BufferE(27).XYZ(546.7424,-373.3555,1074.498,137.4176,90,-180)
+    BufferE(27).ZWorld = False
+    BufferE(27).ZClearance = 1E+32
+    BufferE(27).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(28) = New Location 
+    BufferE(28).Type = 0
+    BufferE(28).XYZ(464.0985,-452.0493,1074.483,136.6757,90,-180)
+    BufferE(28).ZWorld = False
+    BufferE(28).ZClearance = 1E+32
+    BufferE(28).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(29) = New Location 
+    BufferE(29).Type = 0
+    BufferE(29).XYZ(382.0197,-538.2041,1074.467,137.0726,90,-180)
+    BufferE(29).ZWorld = False
+    BufferE(29).ZClearance = 1E+32
+    BufferE(29).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(30) = New Location 
+    BufferE(30).Type = 0
+    BufferE(30).XYZ(296.2676,-622.9978,1074.46,137.8094,90,-180)
+    BufferE(30).ZWorld = False
+    BufferE(30).ZClearance = 1E+32
+    BufferE(30).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(31) = New Location 
+    BufferE(31).Type = 0
+    BufferE(31).XYZ(625.0683,-293.6393,1009.188,138.6237,90,-180)
+    BufferE(31).ZWorld = False
+    BufferE(31).ZClearance = 1E+32
+    BufferE(31).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(32) = New Location 
+    BufferE(32).Type = 0
+    BufferE(32).XYZ(549.9365,-373.4705,1009.188,137.0641,90,-180)
+    BufferE(32).ZWorld = False
+    BufferE(32).ZClearance = 1E+32
+    BufferE(32).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(33) = New Location 
+    BufferE(33).Type = 0
+    BufferE(33).XYZ(463.1764,-457.6453,1009.188,137.7462,90,-180)
+    BufferE(33).ZWorld = False
+    BufferE(33).ZClearance = 1E+32
+    BufferE(33).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(34) = New Location 
+    BufferE(34).Type = 0
+    BufferE(34).XYZ(379.182,-539.6527,1009.185,137.6983,90,-180)
+    BufferE(34).ZWorld = False
+    BufferE(34).ZClearance = 1E+32
+    BufferE(34).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(35) = New Location 
+    BufferE(35).Type = 0
+    BufferE(35).XYZ(297.7365,-622.8487,1009.186,137.5112,90,-180)
+    BufferE(35).ZWorld = False
+    BufferE(35).ZClearance = 1E+32
+    BufferE(35).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(36) = New Location 
+    BufferE(36).Type = 0
+    BufferE(36).XYZ(632.2078,-287.8193,942.0119,136.8093,90,-180)
+    BufferE(36).ZWorld = False
+    BufferE(36).ZClearance = 1E+32
+    BufferE(36).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(37) = New Location 
+    BufferE(37).Type = 0
+    BufferE(37).XYZ(546.8524,-373.6794,943.0074,137.3785,90,-180)
+    BufferE(37).ZWorld = False
+    BufferE(37).ZClearance = 1E+32
+    BufferE(37).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(38) = New Location 
+    BufferE(38).Type = 0
+    BufferE(38).XYZ(462.2079,-458.3097,942.9851,137.9282,90,-180)
+    BufferE(38).ZWorld = False
+    BufferE(38).ZClearance = 1E+32
+    BufferE(38).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(39) = New Location 
+    BufferE(39).Type = 0
+    BufferE(39).XYZ(377.7465,-541.575,942.3687,138.2052,90,-180)
+    BufferE(39).ZWorld = False
+    BufferE(39).ZClearance = 1E+32
+    BufferE(39).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(40) = New Location 
+    BufferE(40).Type = 0
+    BufferE(40).XYZ(294.804,-622.7725,942.2932,137.9213,90,-180)
+    BufferE(40).ZWorld = False
+    BufferE(40).ZClearance = 1E+32
+    BufferE(40).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(41) = New Location 
+    BufferE(41).Type = 0
+    BufferE(41).XYZ(630.1622,-293.0014,875.1288,137.9028,90,-180)
+    BufferE(41).ZWorld = False
+    BufferE(41).ZClearance = 1E+32
+    BufferE(41).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(42) = New Location 
+    BufferE(42).Type = 0
+    BufferE(42).XYZ(546.056,-372.0589,875.1193,137.4115,90,-180)
+    BufferE(42).ZWorld = False
+    BufferE(42).ZClearance = 1E+32
+    BufferE(42).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(43) = New Location 
+    BufferE(43).Type = 0
+    BufferE(43).XYZ(462.1422,-458.7453,875.1023,137.9388,90,-180)
+    BufferE(43).ZWorld = False
+    BufferE(43).ZClearance = 1E+32
+    BufferE(43).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(44) = New Location 
+    BufferE(44).Type = 0
+    BufferE(44).XYZ(384.5405,-537.0707,875.0955,136.6151,90,-180)
+    BufferE(44).ZWorld = False
+    BufferE(44).ZClearance = 1E+32
+    BufferE(44).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(45) = New Location 
+    BufferE(45).Type = 0
+    BufferE(45).XYZ(298.3245,-622.1827,875.0886,137.2431,90,-180)
+    BufferE(45).ZWorld = False
+    BufferE(45).ZClearance = 1E+32
+    BufferE(45).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(46) = New Location 
+    BufferE(46).Type = 0
+    BufferE(46).XYZ(628.687,-293.9595,807.7291,138.4747,90,-180)
+    BufferE(46).ZWorld = False
+    BufferE(46).ZClearance = 1E+32
+    BufferE(46).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(47) = New Location 
+    BufferE(47).Type = 0
+    BufferE(47).XYZ(548.8018,-372.0144,808.1445,137.1398,90,-180)
+    BufferE(47).ZWorld = False
+    BufferE(47).ZClearance = 1E+32
+    BufferE(47).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(48) = New Location 
+    BufferE(48).Type = 0
+    BufferE(48).XYZ(465.389,-454.3852,808.0961,137.0134,90,-180)
+    BufferE(48).ZWorld = False
+    BufferE(48).ZClearance = 1E+32
+    BufferE(48).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(49) = New Location 
+    BufferE(49).Type = 0
+    BufferE(49).XYZ(383.2385,-536.3312,808.0634,136.9267,90,-180)
+    BufferE(49).ZWorld = False
+    BufferE(49).ZClearance = 1E+32
+    BufferE(49).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(50) = New Location 
+    BufferE(50).Type = 0
+    BufferE(50).XYZ(299.5363,-623.3798,808.0568,137.5163,90,-180)
+    BufferE(50).ZWorld = False
+    BufferE(50).ZClearance = 1E+32
+    BufferE(50).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(51) = New Location 
+    BufferE(51).Type = 0
+    BufferE(51).XYZ(626.8358,-293.897,741.5576,138.5643,90,-180)
+    BufferE(51).ZWorld = False
+    BufferE(51).ZClearance = 1E+32
+    BufferE(51).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(52) = New Location 
+    BufferE(52).Type = 0
+    BufferE(52).XYZ(548.2419,-372.3778,742.1151,137.1717,90,-180)
+    BufferE(52).ZWorld = False
+    BufferE(52).ZClearance = 1E+32
+    BufferE(52).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(53) = New Location 
+    BufferE(53).Type = 0
+    BufferE(53).XYZ(465.9879,-453.9951,742.0934,136.8691,90,-180)
+    BufferE(53).ZWorld = False
+    BufferE(53).ZClearance = 1E+32
+    BufferE(53).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(54) = New Location 
+    BufferE(54).Type = 0
+    BufferE(54).XYZ(382.6074,-538.0523,742.0761,137.0208,90,-180)
+    BufferE(54).ZWorld = False
+    BufferE(54).ZClearance = 1E+32
+    BufferE(54).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(55) = New Location 
+    BufferE(55).Type = 0
+    BufferE(55).XYZ(299.611,-621.8394,742.0702,137.1568,90,-180)
+    BufferE(55).ZWorld = False
+    BufferE(55).ZClearance = 1E+32
+    BufferE(55).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(56) = New Location 
+    BufferE(56).Type = 0
+    BufferE(56).XYZ(629.3263,-293.9409,677.3452,138.3729,90,-180)
+    BufferE(56).ZWorld = False
+    BufferE(56).ZClearance = 1E+32
+    BufferE(56).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(57) = New Location 
+    BufferE(57).Type = 0
+    BufferE(57).XYZ(545.4551,-373.7346,677.3414,137.8858,90,-180)
+    BufferE(57).ZWorld = False
+    BufferE(57).ZClearance = 1E+32
+    BufferE(57).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(58) = New Location 
+    BufferE(58).Type = 0
+    BufferE(58).XYZ(463.8991,-456.6114,677.3357,137.4967,90,-180)
+    BufferE(58).ZWorld = False
+    BufferE(58).ZClearance = 1E+32
+    BufferE(58).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(59) = New Location 
+    BufferE(59).Type = 0
+    BufferE(59).XYZ(380.0212,-540.1973,674.8189,137.8318,90,-180)
+    BufferE(59).ZWorld = False
+    BufferE(59).ZClearance = 1E+32
+    BufferE(59).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(60) = New Location 
+    BufferE(60).Type = 0
+    BufferE(60).XYZ(299.5668,-621.1512,675.116,137.0797,90,-180)
+    BufferE(60).ZWorld = False
+    BufferE(60).ZClearance = 1E+32
+    BufferE(60).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(61) = New Location 
+    BufferE(61).Type = 0
+    BufferE(61).XYZ(629.9167,-292.44,611.5941,137.9105,90,-180)
+    BufferE(61).ZWorld = False
+    BufferE(61).ZClearance = 1E+32
+    BufferE(61).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(62) = New Location 
+    BufferE(62).Type = 0
+    BufferE(62).XYZ(547.5508,-373.1263,611.5308,137.5538,90,-180)
+    BufferE(62).ZWorld = False
+    BufferE(62).ZClearance = 1E+32
+    BufferE(62).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(63) = New Location 
+    BufferE(63).Type = 0
+    BufferE(63).XYZ(467.8933,-453.428,611.4984,136.4658,90,-180)
+    BufferE(63).ZWorld = False
+    BufferE(63).ZClearance = 1E+32
+    BufferE(63).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(64) = New Location 
+    BufferE(64).Type = 0
+    BufferE(64).XYZ(380.7775,-540.4887,611.4811,137.7349,90,-180)
+    BufferE(64).ZWorld = False
+    BufferE(64).ZClearance = 1E+32
+    BufferE(64).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(65) = New Location 
+    BufferE(65).Type = 0
+    BufferE(65).XYZ(299.803,-623.4299,611.4499,137.4258,90,-180)
+    BufferE(65).ZWorld = False
+    BufferE(65).ZClearance = 1E+32
+    BufferE(65).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(66) = New Location 
+    BufferE(66).Type = 0
+    BufferE(66).XYZ(630.787,-290.7291,543.0904,137.5821,90,-180)
+    BufferE(66).ZWorld = False
+    BufferE(66).ZClearance = 1E+32
+    BufferE(66).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(67) = New Location 
+    BufferE(67).Type = 0
+    BufferE(67).XYZ(547.5147,-373.8588,543.088,137.4825,90,-180)
+    BufferE(67).ZWorld = False
+    BufferE(67).ZClearance = 1E+32
+    BufferE(67).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(68) = New Location 
+    BufferE(68).Type = 0
+    BufferE(68).XYZ(463.8955,-454.798,543.0847,137.3287,90,-180)
+    BufferE(68).ZWorld = False
+    BufferE(68).ZClearance = 1E+32
+    BufferE(68).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(69) = New Location 
+    BufferE(69).Type = 0
+    BufferE(69).XYZ(383.0384,-537.2139,543.0803,136.8964,90,-180)
+    BufferE(69).ZWorld = False
+    BufferE(69).ZClearance = 1E+32
+    BufferE(69).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(70) = New Location 
+    BufferE(70).Type = 0
+    BufferE(70).XYZ(297.0954,-626.2217,543.077,138.1127,90,-180)
+    BufferE(70).ZWorld = False
+    BufferE(70).ZClearance = 1E+32
+    BufferE(70).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(71) = New Location 
+    BufferE(71).Type = 0
+    BufferE(71).XYZ(631.8354,-289.5526,477.4707,137.4731,90,-180)
+    BufferE(71).ZWorld = False
+    BufferE(71).ZClearance = 1E+32
+    BufferE(71).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(72) = New Location 
+    BufferE(72).Type = 0
+    BufferE(72).XYZ(545.0774,-378.2647,477.427,138.6414,90,-180)
+    BufferE(72).ZWorld = False
+    BufferE(72).ZClearance = 1E+32
+    BufferE(72).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(73) = New Location 
+    BufferE(73).Type = 0
+    BufferE(73).XYZ(467.4146,-454.06,476.7264,136.8365,90,-180)
+    BufferE(73).ZWorld = False
+    BufferE(73).ZClearance = 1E+32
+    BufferE(73).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(74) = New Location 
+    BufferE(74).Type = 0
+    BufferE(74).XYZ(384.4287,-535.2771,476.7264,136.7233,90,-180)
+    BufferE(74).ZWorld = False
+    BufferE(74).ZClearance = 1E+32
+    BufferE(74).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(75) = New Location 
+    BufferE(75).Type = 0
+    BufferE(75).XYZ(299.8313,-620.7177,476.7261,137.2386,90,-180)
+    BufferE(75).ZWorld = False
+    BufferE(75).ZClearance = 1E+32
+    BufferE(75).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(76) = New Location 
+    BufferE(76).Type = 0
+    BufferE(76).XYZ(628.9277,-292.4532,411.7996,138.2428,90,-180)
+    BufferE(76).ZWorld = False
+    BufferE(76).ZClearance = 1E+32
+    BufferE(76).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(77) = New Location 
+    BufferE(77).Type = 0
+    BufferE(77).XYZ(548.8118,-373.2627,411.799,137.4115,90,-180)
+    BufferE(77).ZWorld = False
+    BufferE(77).ZClearance = 1E+32
+    BufferE(77).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(78) = New Location 
+    BufferE(78).Type = 0
+    BufferE(78).XYZ(465.5874,-457.6386,411.7981,137.5194,90,-180)
+    BufferE(78).ZWorld = False
+    BufferE(78).ZClearance = 1E+32
+    BufferE(78).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(79) = New Location 
+    BufferE(79).Type = 0
+    BufferE(79).XYZ(377.8755,-544.59,411.7981,138.826,90,-180)
+    BufferE(79).ZWorld = False
+    BufferE(79).ZClearance = 1E+32
+    BufferE(79).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(80) = New Location 
+    BufferE(80).Type = 0
+    BufferE(80).XYZ(296.806,-625.8184,411.7975,138.3857,90,-180)
+    BufferE(80).ZWorld = False
+    BufferE(80).ZClearance = 1E+32
+    BufferE(80).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(81) = New Location 
+    BufferE(81).Type = 0
+    BufferE(81).XYZ(628.9275,-292.7435,346.7874,138.2082,90,-180)
+    BufferE(81).ZWorld = False
+    BufferE(81).ZClearance = 1E+32
+    BufferE(81).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(82) = New Location 
+    BufferE(82).Type = 0
+    BufferE(82).XYZ(547.1197,-376.4514,346.7734,138.062,90,-180)
+    BufferE(82).ZWorld = False
+    BufferE(82).ZClearance = 1E+32
+    BufferE(82).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(83) = New Location 
+    BufferE(83).Type = 0
+    BufferE(83).XYZ(465.6743,-456.4687,345.4517,137.3803,90,-180)
+    BufferE(83).ZWorld = False
+    BufferE(83).ZClearance = 1E+32
+    BufferE(83).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(84) = New Location 
+    BufferE(84).Type = 0
+    BufferE(84).XYZ(378.7094,-544.1363,345.4353,138.6172,90,-180)
+    BufferE(84).ZWorld = False
+    BufferE(84).ZClearance = 1E+32
+    BufferE(84).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(85) = New Location 
+    BufferE(85).Type = 0
+    BufferE(85).XYZ(297.1305,-627.0898,345.4229,138.5577,90,-180)
+    BufferE(85).ZWorld = False
+    BufferE(85).ZClearance = 1E+32
+    BufferE(85).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(86) = New Location 
+    BufferE(86).Type = 0
+    BufferE(86).XYZ(627.8204,-292.4588,282.4237,138.4081,90,-180)
+    BufferE(86).ZWorld = False
+    BufferE(86).ZClearance = 1E+32
+    BufferE(86).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(87) = New Location 
+    BufferE(87).Type = 0
+    BufferE(87).XYZ(547.373,-374.0332,282.4217,137.6458,90,-180)
+    BufferE(87).ZWorld = False
+    BufferE(87).ZClearance = 1E+32
+    BufferE(87).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(88) = New Location 
+    BufferE(88).Type = 0
+    BufferE(88).XYZ(462.8714,-458.9901,278.3173,138.1587,90,-180)
+    BufferE(88).ZWorld = False
+    BufferE(88).ZClearance = 1E+32
+    BufferE(88).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(89) = New Location 
+    BufferE(89).Type = 0
+    BufferE(89).XYZ(378.74,-543.6557,278.3167,138.6323,90,-180)
+    BufferE(89).ZWorld = False
+    BufferE(89).ZClearance = 1E+32
+    BufferE(89).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(90) = New Location 
+    BufferE(90).Type = 0
+    BufferE(90).XYZ(298.7242,-625.4149,278.3122,138.1079,90,-180)
+    BufferE(90).ZWorld = False
+    BufferE(90).ZClearance = 1E+32
+    BufferE(90).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(91) = New Location 
+    BufferE(91).Type = 0
+    BufferE(91).XYZ(627.7429,-293.4556,211.5329,138.5402,90,-180)
+    BufferE(91).ZWorld = False
+    BufferE(91).ZClearance = 1E+32
+    BufferE(91).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(92) = New Location 
+    BufferE(92).Type = 0
+    BufferE(92).XYZ(549.8361,-372.9825,212.1957,137.3069,90,-180)
+    BufferE(92).ZWorld = False
+    BufferE(92).ZClearance = 1E+32
+    BufferE(92).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(93) = New Location 
+    BufferE(93).Type = 0
+    BufferE(93).XYZ(467.6581,-454.2202,210.5962,136.8697,90,-180)
+    BufferE(93).ZWorld = False
+    BufferE(93).ZClearance = 1E+32
+    BufferE(93).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(94) = New Location 
+    BufferE(94).Type = 0
+    BufferE(94).XYZ(379.3931,-544.1623,211.873,138.5784,90,-180)
+    BufferE(94).ZWorld = False
+    BufferE(94).ZClearance = 1E+32
+    BufferE(94).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(95) = New Location 
+    BufferE(95).Type = 0
+    BufferE(95).XYZ(296.7953,-627.8144,210.5025,138.7383,90,-180)
+    BufferE(95).ZWorld = False
+    BufferE(95).ZClearance = 1E+32
+    BufferE(95).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(96) = New Location 
+    BufferE(96).Type = 0
+    BufferE(96).XYZ(632.7476,-289.6232,147.1311,137.2685,90,-180)
+    BufferE(96).ZWorld = False
+    BufferE(96).ZClearance = 1E+32
+    BufferE(96).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(97) = New Location 
+    BufferE(97).Type = 0
+    BufferE(97).XYZ(545.9348,-377.0977,146.9732,138.4009,90,-180)
+    BufferE(97).ZWorld = False
+    BufferE(97).ZClearance = 1E+32
+    BufferE(97).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(98) = New Location 
+    BufferE(98).Type = 0
+    BufferE(98).XYZ(464.7201,-457.6775,146.9726,137.9388,90,-180)
+    BufferE(98).ZWorld = False
+    BufferE(98).ZClearance = 1E+32
+    BufferE(98).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(99) = New Location 
+    BufferE(99).Type = 0
+    BufferE(99).XYZ(379.9828,-542.723,145.4909,138.3431,90,-180)
+    BufferE(99).ZWorld = False
+    BufferE(99).ZClearance = 1E+32
+    BufferE(99).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferE,100
+    BufferE(100) = New Location 
+    BufferE(100).Type = 0
+    BufferE(100).XYZ(300.9331,-623.9579,145.193,137.4993,90,-180)
+    BufferE(100).ZWorld = False
+    BufferE(100).ZClearance = 1E+32
+    BufferE(100).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(0) = New Location 
+    BufferF(0).Text = "DO NOT USE !"
+    BufferF(0).Type = 0
+    BufferF(0).XYZ(0,0,0,0,0,0)
+    BufferF(0).ZWorld = False
+    BufferF(0).ZClearance = 1E+32
+    BufferF(0).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(1) = New Location 
+    BufferF(1).Type = 0
+    BufferF(1).XYZ(237.1437,-647.0482,1401.209,92.7874,90,-180)
+    BufferF(1).ZWorld = False
+    BufferF(1).ZClearance = 1E+32
+    BufferF(1).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(2) = New Location 
+    BufferF(2).Type = 0
+    BufferF(2).XYZ(120.2143,-647.8282,1401.214,92.70155,90,-180)
+    BufferF(2).ZWorld = False
+    BufferF(2).ZClearance = 1E+32
+    BufferF(2).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(3) = New Location 
+    BufferF(3).Type = 0
+    BufferF(3).XYZ(3.908178,-648.5984,1401.211,92.42386,90,-180)
+    BufferF(3).ZWorld = False
+    BufferF(3).ZClearance = 1E+32
+    BufferF(3).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(4) = New Location 
+    BufferF(4).Type = 0
+    BufferF(4).XYZ(-110.2374,-648.9679,1401.206,91.93526,90,-180)
+    BufferF(4).ZWorld = False
+    BufferF(4).ZClearance = 1E+32
+    BufferF(4).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(5) = New Location 
+    BufferF(5).Type = 0
+    BufferF(5).XYZ(-231.8165,-649.7585,1401.2,92.64018,90,-180)
+    BufferF(5).ZWorld = False
+    BufferF(5).ZClearance = 1E+32
+    BufferF(5).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(6) = New Location 
+    BufferF(6).Type = 0
+    BufferF(6).XYZ(239.121,-648.8291,1336.834,92.18619,90,-180)
+    BufferF(6).ZWorld = False
+    BufferF(6).ZClearance = 1E+32
+    BufferF(6).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(7) = New Location 
+    BufferF(7).Type = 0
+    BufferF(7).XYZ(123.1196,-648.9099,1335.913,91.96705,90,-180)
+    BufferF(7).ZWorld = False
+    BufferF(7).ZClearance = 1E+32
+    BufferF(7).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(8) = New Location 
+    BufferF(8).Type = 0
+    BufferF(8).XYZ(6.068307,-649.408,1335.913,91.95261,90,-180)
+    BufferF(8).ZWorld = False
+    BufferF(8).ZClearance = 1E+32
+    BufferF(8).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(9) = New Location 
+    BufferF(9).Type = 0
+    BufferF(9).XYZ(-112.7122,-650.3746,1335.821,92.34087,90,-180)
+    BufferF(9).ZWorld = False
+    BufferF(9).ZClearance = 1E+32
+    BufferF(9).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(10) = New Location 
+    BufferF(10).Type = 0
+    BufferF(10).XYZ(-231.5076,-648.6945,1333.774,92.55207,90,-180)
+    BufferF(10).ZWorld = False
+    BufferF(10).ZClearance = 1E+32
+    BufferF(10).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(11) = New Location 
+    BufferF(11).Type = 0
+    BufferF(11).XYZ(235.5618,-649.6223,1268.289,93.16703,90,-180)
+    BufferF(11).ZWorld = False
+    BufferF(11).ZClearance = 1E+32
+    BufferF(11).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(12) = New Location 
+    BufferF(12).Type = 0
+    BufferF(12).XYZ(119.1029,-648.728,1268.178,92.97633,90,-180)
+    BufferF(12).ZWorld = False
+    BufferF(12).ZClearance = 1E+32
+    BufferF(12).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(13) = New Location 
+    BufferF(13).Type = 0
+    BufferF(13).XYZ(1.298101,-648.7764,1268.145,93.00037,90,-180)
+    BufferF(13).ZWorld = False
+    BufferF(13).ZClearance = 1E+32
+    BufferF(13).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(14) = New Location 
+    BufferF(14).Type = 0
+    BufferF(14).XYZ(-116.3272,-649.3402,1268.081,93.01638,90,-180)
+    BufferF(14).ZWorld = False
+    BufferF(14).ZClearance = 1E+32
+    BufferF(14).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(15) = New Location 
+    BufferF(15).Type = 0
+    BufferF(15).XYZ(-232.0214,-648.9828,1268.066,92.83081,90,-180)
+    BufferF(15).ZWorld = False
+    BufferF(15).ZClearance = 1E+32
+    BufferF(15).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(16) = New Location 
+    BufferF(16).Type = 0
+    BufferF(16).XYZ(239.7406,-648.7476,1202.584,92.3307,90,-180)
+    BufferF(16).ZWorld = False
+    BufferF(16).ZClearance = 1E+32
+    BufferF(16).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(17) = New Location 
+    BufferF(17).Type = 0
+    BufferF(17).XYZ(120.5461,-649.2759,1202.583,92.60803,90,-180)
+    BufferF(17).ZWorld = False
+    BufferF(17).ZClearance = 1E+32
+    BufferF(17).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(18) = New Location 
+    BufferF(18).Type = 0
+    BufferF(18).XYZ(7.169712,-648.1357,1201.899,91.83552,90,-180)
+    BufferF(18).ZWorld = False
+    BufferF(18).ZClearance = 1E+32
+    BufferF(18).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(19) = New Location 
+    BufferF(19).Type = 0
+    BufferF(19).XYZ(-110.5037,-649.4854,1202.229,91.9418,90,-180)
+    BufferF(19).ZWorld = False
+    BufferF(19).ZClearance = 1E+32
+    BufferF(19).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(20) = New Location 
+    BufferF(20).Type = 0
+    BufferF(20).XYZ(-230.6126,-649.8893,1202.218,92.54228,90,-180)
+    BufferF(20).ZWorld = False
+    BufferF(20).ZClearance = 1E+32
+    BufferF(20).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(21) = New Location 
+    BufferF(21).Type = 0
+    BufferF(21).XYZ(238.3525,-648.742,1136.256,92.67921,90,-180)
+    BufferF(21).ZWorld = False
+    BufferF(21).ZClearance = 1E+32
+    BufferF(21).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(22) = New Location 
+    BufferF(22).Type = 0
+    BufferF(22).XYZ(121.0627,-648.4315,1136.256,92.62071,90,-180)
+    BufferF(22).ZWorld = False
+    BufferF(22).ZClearance = 1E+32
+    BufferF(22).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(23) = New Location 
+    BufferF(23).Type = 0
+    BufferF(23).XYZ(6.344452,-649.5589,1136.256,92.11475,90,-180)
+    BufferF(23).ZWorld = False
+    BufferF(23).ZClearance = 1E+32
+    BufferF(23).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(24) = New Location 
+    BufferF(24).Type = 0
+    BufferF(24).XYZ(-114.3969,-649.1061,1136.117,92.82735,90,-180)
+    BufferF(24).ZWorld = False
+    BufferF(24).ZClearance = 1E+32
+    BufferF(24).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(25) = New Location 
+    BufferF(25).Type = 0
+    BufferF(25).XYZ(-226.0888,-650.7938,1135.327,91.61959,90,-180)
+    BufferF(25).ZWorld = False
+    BufferF(25).ZClearance = 1E+32
+    BufferF(25).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(26) = New Location 
+    BufferF(26).Type = 0
+    BufferF(26).XYZ(237.1075,-647.7645,1069.489,93.05183,90,-180)
+    BufferF(26).ZWorld = False
+    BufferF(26).ZClearance = 1E+32
+    BufferF(26).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(27) = New Location 
+    BufferF(27).Type = 0
+    BufferF(27).XYZ(118.8502,-648.5998,1069.478,93.12624,90,-180)
+    BufferF(27).ZWorld = False
+    BufferF(27).ZClearance = 1E+32
+    BufferF(27).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(28) = New Location 
+    BufferF(28).Type = 0
+    BufferF(28).XYZ(7.328265,-648.9265,1069.478,91.95155,90,-180)
+    BufferF(28).ZWorld = False
+    BufferF(28).ZClearance = 1E+32
+    BufferF(28).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(29) = New Location 
+    BufferF(29).Type = 0
+    BufferF(29).XYZ(-113.3398,-649.4119,1069.479,92.63934,90,-180)
+    BufferF(29).ZWorld = False
+    BufferF(29).ZClearance = 1E+32
+    BufferF(29).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(30) = New Location 
+    BufferF(30).Type = 0
+    BufferF(30).XYZ(-230.1414,-651.4072,1069.428,92.4268,90,-180)
+    BufferF(30).ZWorld = False
+    BufferF(30).ZClearance = 1E+32
+    BufferF(30).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(31) = New Location 
+    BufferF(31).Type = 0
+    BufferF(31).XYZ(236.7086,-649.5116,1003.126,93.08302,90,-180)
+    BufferF(31).ZWorld = False
+    BufferF(31).ZClearance = 1E+32
+    BufferF(31).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(32) = New Location 
+    BufferF(32).Type = 0
+    BufferF(32).XYZ(121.6125,-649.2661,1003.089,92.63783,90,-180)
+    BufferF(32).ZWorld = False
+    BufferF(32).ZClearance = 1E+32
+    BufferF(32).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(33) = New Location 
+    BufferF(33).Type = 0
+    BufferF(33).XYZ(6.093254,-648.7045,1003.089,92.23841,90,-180)
+    BufferF(33).ZWorld = False
+    BufferF(33).ZClearance = 1E+32
+    BufferF(33).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(34) = New Location 
+    BufferF(34).Type = 0
+    BufferF(34).XYZ(-111.4965,-648.743,1003.109,92.24095,90,-180)
+    BufferF(34).ZWorld = False
+    BufferF(34).ZClearance = 1E+32
+    BufferF(34).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(35) = New Location 
+    BufferF(35).Type = 0
+    BufferF(35).XYZ(-228.4141,-650.8126,1003.03,92.07915,90,-180)
+    BufferF(35).ZWorld = False
+    BufferF(35).ZClearance = 1E+32
+    BufferF(35).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(36) = New Location 
+    BufferF(36).Type = 0
+    BufferF(36).XYZ(238.3557,-648.787,937.915,92.76359,90,-180)
+    BufferF(36).ZWorld = False
+    BufferF(36).ZClearance = 1E+32
+    BufferF(36).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(37) = New Location 
+    BufferF(37).Type = 0
+    BufferF(37).XYZ(119.4721,-649.801,936.3949,93.10288,90,-180)
+    BufferF(37).ZWorld = False
+    BufferF(37).ZClearance = 1E+32
+    BufferF(37).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(38) = New Location 
+    BufferF(38).Type = 0
+    BufferF(38).XYZ(5.308405,-648.1807,936.3946,92.30632,90,-180)
+    BufferF(38).ZWorld = False
+    BufferF(38).ZClearance = 1E+32
+    BufferF(38).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(39) = New Location 
+    BufferF(39).Type = 0
+    BufferF(39).XYZ(-111.3154,-649.502,936.3952,92.2252,90,-180)
+    BufferF(39).ZWorld = False
+    BufferF(39).ZClearance = 1E+32
+    BufferF(39).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(40) = New Location 
+    BufferF(40).Type = 0
+    BufferF(40).XYZ(-227.2882,-651.183,936.3955,91.89217,90,-180)
+    BufferF(40).ZWorld = False
+    BufferF(40).ZClearance = 1E+32
+    BufferF(40).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(41) = New Location 
+    BufferF(41).Type = 0
+    BufferF(41).XYZ(238.5591,-649.3903,871.4264,92.7359,90,-180)
+    BufferF(41).ZWorld = False
+    BufferF(41).ZClearance = 1E+32
+    BufferF(41).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(42) = New Location 
+    BufferF(42).Type = 0
+    BufferF(42).XYZ(118.7866,-648.5944,870.017,93.27341,90,-180)
+    BufferF(42).ZWorld = False
+    BufferF(42).ZClearance = 1E+32
+    BufferF(42).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(43) = New Location 
+    BufferF(43).Type = 0
+    BufferF(43).XYZ(5.310122,-648.8371,870.0149,92.42956,90,-180)
+    BufferF(43).ZWorld = False
+    BufferF(43).ZClearance = 1E+32
+    BufferF(43).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(44) = New Location 
+    BufferF(44).Type = 0
+    BufferF(44).XYZ(-110.155,-649.3185,870.0119,92.08959,90,-180)
+    BufferF(44).ZWorld = False
+    BufferF(44).ZClearance = 1E+32
+    BufferF(44).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(45) = New Location 
+    BufferF(45).Type = 0
+    BufferF(45).XYZ(-227.0623,-649.7561,870.011,91.90273,90,-180)
+    BufferF(45).ZWorld = False
+    BufferF(45).ZClearance = 1E+32
+    BufferF(45).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(46) = New Location 
+    BufferF(46).Type = 0
+    BufferF(46).XYZ(235.9691,-650.0891,805.5103,93.26194,90,-180)
+    BufferF(46).ZWorld = False
+    BufferF(46).ZClearance = 1E+32
+    BufferF(46).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(47) = New Location 
+    BufferF(47).Type = 0
+    BufferF(47).XYZ(120.5747,-649.2197,804.5905,92.81905,90,-180)
+    BufferF(47).ZWorld = False
+    BufferF(47).ZClearance = 1E+32
+    BufferF(47).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(48) = New Location 
+    BufferF(48).Type = 0
+    BufferF(48).XYZ(1.984672,-649.2704,804.5882,93.0962,90,-180)
+    BufferF(48).ZWorld = False
+    BufferF(48).ZClearance = 1E+32
+    BufferF(48).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(49) = New Location 
+    BufferF(49).Type = 0
+    BufferF(49).XYZ(-111.8973,-650.0303,804.5852,92.32441,90,-180)
+    BufferF(49).ZWorld = False
+    BufferF(49).ZClearance = 1E+32
+    BufferF(49).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(50) = New Location 
+    BufferF(50).Type = 0
+    BufferF(50).XYZ(-232.7921,-650.8715,804.5852,93.04143,90,-180)
+    BufferF(50).ZWorld = False
+    BufferF(50).ZClearance = 1E+32
+    BufferF(50).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(51) = New Location 
+    BufferF(51).Type = 0
+    BufferF(51).XYZ(241.6605,-649.8072,740.1954,92.09952,90,-180)
+    BufferF(51).ZWorld = False
+    BufferF(51).ZClearance = 1E+32
+    BufferF(51).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(52) = New Location 
+    BufferF(52).Type = 0
+    BufferF(52).XYZ(120.7613,-647.8525,739.4193,92.75612,90,-180)
+    BufferF(52).ZWorld = False
+    BufferF(52).ZClearance = 1E+32
+    BufferF(52).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(53) = New Location 
+    BufferF(53).Type = 0
+    BufferF(53).XYZ(0.297224,-648.7897,738.5153,93.51662,90,-180)
+    BufferF(53).ZWorld = False
+    BufferF(53).ZClearance = 1E+32
+    BufferF(53).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(54) = New Location 
+    BufferF(54).Type = 0
+    BufferF(54).XYZ(-109.5782,-649.8734,738.5144,91.84962,90,-180)
+    BufferF(54).ZWorld = False
+    BufferF(54).ZClearance = 1E+32
+    BufferF(54).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(55) = New Location 
+    BufferF(55).Type = 0
+    BufferF(55).XYZ(-228.6684,-650.9368,738.5123,92.21358,90,-180)
+    BufferF(55).ZWorld = False
+    BufferF(55).ZClearance = 1E+32
+    BufferF(55).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(56) = New Location 
+    BufferF(56).Type = 0
+    BufferF(56).XYZ(235.3629,-651.9012,672.2587,93.53577,90,-180)
+    BufferF(56).ZWorld = False
+    BufferF(56).ZClearance = 1E+32
+    BufferF(56).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(57) = New Location 
+    BufferF(57).Type = 0
+    BufferF(57).XYZ(120.5426,-649.1974,672.2421,93.0241,90,-180)
+    BufferF(57).ZWorld = False
+    BufferF(57).ZClearance = 1E+32
+    BufferF(57).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(58) = New Location 
+    BufferF(58).Type = 0
+    BufferF(58).XYZ(3.011104,-649.8809,672.2123,92.85219,90,-180)
+    BufferF(58).ZWorld = False
+    BufferF(58).ZClearance = 1E+32
+    BufferF(58).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(59) = New Location 
+    BufferF(59).Type = 0
+    BufferF(59).XYZ(-108.68,-650.6005,672.1981,91.78896,90,-180)
+    BufferF(59).ZWorld = False
+    BufferF(59).ZClearance = 1E+32
+    BufferF(59).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(60) = New Location 
+    BufferF(60).Type = 0
+    BufferF(60).XYZ(-230.7656,-650.1525,672.0286,92.80238,90,-180)
+    BufferF(60).ZWorld = False
+    BufferF(60).ZClearance = 1E+32
+    BufferF(60).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(61) = New Location 
+    BufferF(61).Type = 0
+    BufferF(61).XYZ(244.0788,-651.3343,604.6369,91.83039,90,-180)
+    BufferF(61).ZWorld = False
+    BufferF(61).ZClearance = 1E+32
+    BufferF(61).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(62) = New Location 
+    BufferF(62).Type = 0
+    BufferF(62).XYZ(123.8629,-650.0038,605.4327,92.28129,90,-180)
+    BufferF(62).ZWorld = False
+    BufferF(62).ZClearance = 1E+32
+    BufferF(62).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(63) = New Location 
+    BufferF(63).Type = 0
+    BufferF(63).XYZ(4.847463,-649.8666,605.0146,92.6236,90,-180)
+    BufferF(63).ZWorld = False
+    BufferF(63).ZClearance = 1E+32
+    BufferF(63).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(64) = New Location 
+    BufferF(64).Type = 0
+    BufferF(64).XYZ(-111.8647,-650.6202,605.0128,92.40167,90,-180)
+    BufferF(64).ZWorld = False
+    BufferF(64).ZClearance = 1E+32
+    BufferF(64).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(65) = New Location 
+    BufferF(65).Type = 0
+    BufferF(65).XYZ(-234.9765,-650.559,605.014,93.52956,90,-180)
+    BufferF(65).ZWorld = False
+    BufferF(65).ZClearance = 1E+32
+    BufferF(65).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(66) = New Location 
+    BufferF(66).Type = 0
+    BufferF(66).XYZ(239.7652,-649.5829,539.1978,92.68707,90,-180)
+    BufferF(66).ZWorld = False
+    BufferF(66).ZClearance = 1E+32
+    BufferF(66).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(67) = New Location 
+    BufferF(67).Type = 0
+    BufferF(67).XYZ(118.775,-650.218,538.9711,93.27806,90,-180)
+    BufferF(67).ZWorld = False
+    BufferF(67).ZClearance = 1E+32
+    BufferF(67).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(68) = New Location 
+    BufferF(68).Type = 0
+    BufferF(68).XYZ(4.174225,-650.5657,538.9691,92.72344,90,-180)
+    BufferF(68).ZWorld = False
+    BufferF(68).ZClearance = 1E+32
+    BufferF(68).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(69) = New Location 
+    BufferF(69).Type = 0
+    BufferF(69).XYZ(-113.3823,-650.6361,538.9622,92.68314,90,-180)
+    BufferF(69).ZWorld = False
+    BufferF(69).ZClearance = 1E+32
+    BufferF(69).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(70) = New Location 
+    BufferF(70).Type = 0
+    BufferF(70).XYZ(-229.1904,-650.423,538.9601,92.2421,90,-180)
+    BufferF(70).ZWorld = False
+    BufferF(70).ZClearance = 1E+32
+    BufferF(70).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(71) = New Location 
+    BufferF(71).Type = 0
+    BufferF(71).XYZ(234.6565,-648.2061,472.8373,93.67185,90,-180)
+    BufferF(71).ZWorld = False
+    BufferF(71).ZClearance = 1E+32
+    BufferF(71).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(72) = New Location 
+    BufferF(72).Type = 0
+    BufferF(72).XYZ(122.8772,-649.4343,472.826,92.43319,90,-180)
+    BufferF(72).ZWorld = False
+    BufferF(72).ZClearance = 1E+32
+    BufferF(72).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(73) = New Location 
+    BufferF(73).Type = 0
+    BufferF(73).XYZ(5.91995,-650.0568,472.8168,92.40921,90,-180)
+    BufferF(73).ZWorld = False
+    BufferF(73).ZClearance = 1E+32
+    BufferF(73).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(74) = New Location 
+    BufferF(74).Type = 0
+    BufferF(74).XYZ(-110.7086,-649.8349,472.3571,92.07562,90,-180)
+    BufferF(74).ZWorld = False
+    BufferF(74).ZClearance = 1E+32
+    BufferF(74).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(75) = New Location 
+    BufferF(75).Type = 0
+    BufferF(75).XYZ(-230.8198,-650.8952,472.3544,92.60357,90,-180)
+    BufferF(75).ZWorld = False
+    BufferF(75).ZClearance = 1E+32
+    BufferF(75).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(76) = New Location 
+    BufferF(76).Type = 0
+    BufferF(76).XYZ(241.4253,-649.1426,406.6982,92.39969,90,-180)
+    BufferF(76).ZWorld = False
+    BufferF(76).ZClearance = 1E+32
+    BufferF(76).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(77) = New Location 
+    BufferF(77).Type = 0
+    BufferF(77).XYZ(119.2234,-649.3631,406.6884,93.28883,90,-180)
+    BufferF(77).ZWorld = False
+    BufferF(77).ZClearance = 1E+32
+    BufferF(77).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(78) = New Location 
+    BufferF(78).Type = 0
+    BufferF(78).XYZ(3.365384,-649.324,405.7181,92.99799,90,-180)
+    BufferF(78).ZWorld = False
+    BufferF(78).ZClearance = 1E+32
+    BufferF(78).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(79) = New Location 
+    BufferF(79).Type = 0
+    BufferF(79).XYZ(-109.3455,-648.4706,405.7098,91.81434,90,-180)
+    BufferF(79).ZWorld = False
+    BufferF(79).ZClearance = 1E+32
+    BufferF(79).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(80) = New Location 
+    BufferF(80).Type = 0
+    BufferF(80).XYZ(-228.9664,-652.0487,405.898,92.38931,90,-180)
+    BufferF(80).ZWorld = False
+    BufferF(80).ZClearance = 1E+32
+    BufferF(80).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(81) = New Location 
+    BufferF(81).Type = 0
+    BufferF(81).XYZ(236.5465,-649.2716,339.3066,93.37315,90,-180)
+    BufferF(81).ZWorld = False
+    BufferF(81).ZClearance = 1E+32
+    BufferF(81).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(82) = New Location 
+    BufferF(82).Type = 0
+    BufferF(82).XYZ(121.4745,-649.0974,339.7657,92.79298,90,-180)
+    BufferF(82).ZWorld = False
+    BufferF(82).ZClearance = 1E+32
+    BufferF(82).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(83) = New Location 
+    BufferF(83).Type = 0
+    BufferF(83).XYZ(4.664364,-649.7346,339.4799,92.63047,90,-180)
+    BufferF(83).ZWorld = False
+    BufferF(83).ZClearance = 1E+32
+    BufferF(83).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(84) = New Location 
+    BufferF(84).Type = 0
+    BufferF(84).XYZ(-115.6217,-650.9062,339.471,93.24625,90,-180)
+    BufferF(84).ZWorld = False
+    BufferF(84).ZClearance = 1E+32
+    BufferF(84).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(85) = New Location 
+    BufferF(85).Type = 0
+    BufferF(85).XYZ(-229.5997,-650.9504,339.4585,92.46059,90,-180)
+    BufferF(85).ZWorld = False
+    BufferF(85).ZClearance = 1E+32
+    BufferF(85).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(86) = New Location 
+    BufferF(86).Type = 0
+    BufferF(86).XYZ(239.2322,-647.8674,272.1612,92.85116,90,-180)
+    BufferF(86).ZWorld = False
+    BufferF(86).ZClearance = 1E+32
+    BufferF(86).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(87) = New Location 
+    BufferF(87).Type = 0
+    BufferF(87).XYZ(118.7931,-649.3263,272.653,93.39825,90,-180)
+    BufferF(87).ZWorld = False
+    BufferF(87).ZClearance = 1E+32
+    BufferF(87).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(88) = New Location 
+    BufferF(88).Type = 0
+    BufferF(88).XYZ(4.252086,-648.5234,272.3327,92.7908,90,-180)
+    BufferF(88).ZWorld = False
+    BufferF(88).ZClearance = 1E+32
+    BufferF(88).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(89) = New Location 
+    BufferF(89).Type = 0
+    BufferF(89).XYZ(-109.1887,-650.5897,272.3277,91.96922,90,-180)
+    BufferF(89).ZWorld = False
+    BufferF(89).ZClearance = 1E+32
+    BufferF(89).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(90) = New Location 
+    BufferF(90).Type = 0
+    BufferF(90).XYZ(-231.8319,-651.5786,272.3214,93.07234,90,-180)
+    BufferF(90).ZWorld = False
+    BufferF(90).ZClearance = 1E+32
+    BufferF(90).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(91) = New Location 
+    BufferF(91).Type = 0
+    BufferF(91).XYZ(238.4604,-647.9869,205.7062,93.09794,90,-180)
+    BufferF(91).ZWorld = False
+    BufferF(91).ZClearance = 1E+32
+    BufferF(91).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(92) = New Location 
+    BufferF(92).Type = 0
+    BufferF(92).XYZ(121.3025,-647.6149,206.0618,92.92325,90,-180)
+    BufferF(92).ZWorld = False
+    BufferF(92).ZClearance = 1E+32
+    BufferF(92).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(93) = New Location 
+    BufferF(93).Type = 0
+    BufferF(93).XYZ(7.025033,-648.3928,205.7541,92.37016,90,-180)
+    BufferF(93).ZWorld = False
+    BufferF(93).ZClearance = 1E+32
+    BufferF(93).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(94) = New Location 
+    BufferF(94).Type = 0
+    BufferF(94).XYZ(-112.485,-649.1833,205.6845,92.64722,90,-180)
+    BufferF(94).ZWorld = False
+    BufferF(94).ZClearance = 1E+32
+    BufferF(94).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(95) = New Location 
+    BufferF(95).Type = 0
+    BufferF(95).XYZ(-227.9237,-649.9988,205.5034,92.2221,90,-180)
+    BufferF(95).ZWorld = False
+    BufferF(95).ZClearance = 1E+32
+    BufferF(95).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(96) = New Location 
+    BufferF(96).Type = 0
+    BufferF(96).XYZ(235.3626,-647.2565,138.5614,93.82291,90,-180)
+    BufferF(96).ZWorld = False
+    BufferF(96).ZClearance = 1E+32
+    BufferF(96).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(97) = New Location 
+    BufferF(97).Type = 0
+    BufferF(97).XYZ(125.687,-649.7693,140.1588,92.02771,90,-180)
+    BufferF(97).ZWorld = False
+    BufferF(97).ZClearance = 1E+32
+    BufferF(97).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(98) = New Location 
+    BufferF(98).Type = 0
+    BufferF(98).XYZ(8.337236,-650.1818,139.7942,92.12716,90,-180)
+    BufferF(98).ZWorld = False
+    BufferF(98).ZClearance = 1E+32
+    BufferF(98).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(99) = New Location 
+    BufferF(99).Type = 0
+    BufferF(99).XYZ(-105.2626,-651.2529,139.7547,91.29022,90,-180)
+    BufferF(99).ZWorld = False
+    BufferF(99).ZClearance = 1E+32
+    BufferF(99).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>BufferF,100
+    BufferF(100) = New Location 
+    BufferF(100).Type = 0
+    BufferF(100).XYZ(-226.8101,-650.2899,139.694,91.93707,90,-180)
+    BufferF(100).ZWorld = False
+    BufferF(100).ZClearance = 1E+32
+    BufferF(100).Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>ConveyorA
+    ConveyorA = New Location 
+    ConveyorA.Type = 0
+    ConveyorA.XYZ(413.0825,-362.5743,57.00119,-89.29054,90,180)
+    ConveyorA.ZWorld = False
+    ConveyorA.ZClearance = 1E+32
+    ConveyorA.Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>ConveyorB
+    ConveyorB = New Location 
+    ConveyorB.Type = 0
+    ConveyorB.XYZ(418.9652,-103.5781,60.06334,-87.88004,90,180)
+    ConveyorB.ZWorld = False
+    ConveyorB.ZClearance = 1E+32
+    ConveyorB.Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>ConveyorC
+    ConveyorC = New Location 
+    ConveyorC.Type = 0
+    ConveyorC.XYZ(38.31378,269.3087,63.72554,1.245386,90,180)
+    ConveyorC.ZWorld = False
+    ConveyorC.ZClearance = 1E+32
+    ConveyorC.Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>ConveyorD
+    ConveyorD = New Location 
+    ConveyorD.Type = 0
+    ConveyorD.XYZ(236.794,84.0555,57.83289,91.21694,90,-180)
+    ConveyorD.ZWorld = False
+    ConveyorD.ZClearance = 1E+32
+    ConveyorD.Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>Swap
+    Swap = New Location 
+    Swap.Text = "close gripper"
+    Swap.Type = 1
+    Swap.Angles(15.98511,227.8748,164.2027,1.040707,107.3918,0,0,0,0,0,0,0)
+    Swap.ZWorld = False
+    Swap.ZClearance = 1E+32
+    Swap.Config = 0
+    '</MotionLocation>
+
+    '<MotionLocation>swap1
+    swap1 = New Location 
+    swap1.Type = 1
+    swap1.Angles(15.98648,227.8739,164.1913,1.035434,119.8091,0,0,0,0,0,0,0)
+    swap1.ZWorld = False
+    swap1.ZClearance = 1E+32
+    swap1.Config = 0
+    '</MotionLocation>
+
+    '<MotionProfile>RAB_Blended
+    RAB_Blended = New Profile
+    RAB_Blended.Speed = 100
+    RAB_Blended.Speed2 = 0
+    RAB_Blended.Accel = 100
+    RAB_Blended.Decel = 100
+    RAB_Blended.AccelRamp = 1
+    RAB_Blended.DecelRamp = 1
+    RAB_Blended.Straight = False
+    RAB_Blended.InRange = -1
+    '</MotionProfile>
+
+    '<MotionProfile>RAB_Depart
+    RAB_Depart = New Profile
+    RAB_Depart.Speed = 50
+    RAB_Depart.Speed2 = 0
+    RAB_Depart.Accel = 100
+    RAB_Depart.Decel = 100
+    RAB_Depart.AccelRamp = 0.4
+    RAB_Depart.DecelRamp = 0.4
+    RAB_Depart.Straight = False
+    RAB_Depart.InRange = -1
+    '</MotionProfile>
+
+    '<MotionProfile>RAB_Fast
+    RAB_Fast = New Profile
+    RAB_Fast.Speed = 100
+    RAB_Fast.Speed2 = 0
+    RAB_Fast.Accel = 50
+    RAB_Fast.Decel = 50
+    RAB_Fast.AccelRamp = 0.2
+    RAB_Fast.DecelRamp = 0.2
+    RAB_Fast.Straight = False
+    RAB_Fast.InRange = 10
+    '</MotionProfile>
+
+    '<MotionProfile>RAB_Grip
+    RAB_Grip = New Profile
+    RAB_Grip.Speed = 100
+    RAB_Grip.Speed2 = 0
+    RAB_Grip.Accel = 50
+    RAB_Grip.Decel = 50
+    RAB_Grip.AccelRamp = 0.1
+    RAB_Grip.DecelRamp = 0.1
+    RAB_Grip.Straight = False
+    RAB_Grip.InRange = 10
+    '</MotionProfile>
+
+    '<MotionProfile>RAB_Slow
+    RAB_Slow = New Profile
+    RAB_Slow.Speed = 10
+    RAB_Slow.Speed2 = 0
+    RAB_Slow.Accel = 10
+    RAB_Slow.Decel = 10
+    RAB_Slow.AccelRamp = 10
+    RAB_Slow.DecelRamp = 10
+    RAB_Slow.Straight = False
+    RAB_Slow.InRange = 10
+    '</MotionProfile>
+
+    '<MotionProfile>RAB_Straight
+    RAB_Straight = New Profile
+    RAB_Straight.Speed = 100
+    RAB_Straight.Speed2 = 0
+    RAB_Straight.Accel = 100
+    RAB_Straight.Decel = 100
+    RAB_Straight.AccelRamp = 0.2
+    RAB_Straight.DecelRamp = 0.2
+    RAB_Straight.Straight = True
+    RAB_Straight.InRange = 10
+    '</MotionProfile>
+
+    '<MotionProfile>RAB_StraightBlend
+    RAB_StraightBlend = New Profile
+    RAB_StraightBlend.Speed = 100
+    RAB_StraightBlend.Speed2 = 0
+    RAB_StraightBlend.Accel = 100
+    RAB_StraightBlend.Decel = 100
+    RAB_StraightBlend.AccelRamp = 6
+    RAB_StraightBlend.DecelRamp = 6
+    RAB_StraightBlend.Straight = True
+    RAB_StraightBlend.InRange = -1
+    '</MotionProfile>
+
+  End Sub 
+End Module 

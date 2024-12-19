@@ -40,13 +40,14 @@ def main():
     gpoBufferContent = gpoBuffersFile.read()
     gpoBuffersFile.close()
     panels = ["A", "B", "C", "D", "E", "F"]
-    regexString = r"Buffer[A-F][0-9]\([1-9].*?\).XYZ.*"
+    regexString = r"Buffer[A-F]\([1-9].*?\).XYZ.*"
     conveyorString = "Conveyor[A-F].XYZ.*"
     reg = re.compile(regexString)
 
     # BufferA1(1).XYZ(-619.2606,301.9012,1407.145,-41.56812,90,180)
     # Regex returns all strings matching something similar to the above.
     points = reg.findall(gpoBufferContent)
+    print(gpoBufferContent)
     conveyor = re.compile(conveyorString).findall(gpoBufferContent)
     points.extend(conveyor)
     OutPackoff = get_info(points[601])
